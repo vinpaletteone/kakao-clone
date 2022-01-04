@@ -1,0 +1,13 @@
+// @import url('../assets/font/KakaoRegular.ttf');
+// @import url('../assets/font/KakaoBold.ttf');
+
+@import './mixin.scss';
+@include font-face('KakaoRegular', 'KakaoRegular');
+
+$font-stack: KakaoRegular, Helvetica, sans-serif;
+$primary-color: #333;
+
+body{
+    font: 100% $font-stack;
+    color: $primary-color
+}
