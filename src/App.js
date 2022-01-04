@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Main } from './js/routes';
-import 'sass-reset'
+import 'sass-reset';
+import './styles/global.scss'
 
 function App() {
   return (
