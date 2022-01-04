@@ -1,9 +1,13 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Main } from './js/routes'
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
+    <BrowserRouter className="App">
+        <Routes>
+          <Route path="/" element={<Main />} />
+        </Routes>
+    </BrowserRouter>
   );
 }
 
