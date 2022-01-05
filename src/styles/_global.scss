@@ -8,4 +8,10 @@ body{
     font: 100% $font-stack;
     color: $primary-color;
     @include font-style(14, 1.5);
+    &.dark{
+        background-color: #000;
+    }
+    &light{
+        background-color: #fff;
+    }
 }
