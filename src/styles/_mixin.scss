@@ -1,0 +1,79 @@
+@import './typography';
+
+@mixin font-face($name, $file, $weight: normal, $style: normal) {
+    @font-face { 
+        font-family: "#{$name}"; 
+        src: url('../assets/font/#{$file}.ttf') format('truetype'); 
+        font-weight: $weight; 
+        font-style: $style; 
+    }
+} 
+@mixin font-style($size, $lineHeight, $color: false, $weight:400) {
+    @if ( $size == 12 ){
+        font-size: $font-size-12;
+    }
+    @if ( $size == 13 ){
+        font-size: $font-size-13;
+    }
+    @if ( $size == 14 ){
+        font-size: $font-size-14;
+    }
+    @if ( $size == 16 ){
+        font-size: $font-size-16;
+    }
+    @if ( $size == 18 ){
+        font-size: $font-size-18;
+    }
+    @if ( $size == 32 ){
+        font-size: $font-size-32;
+    }
+    @if ( $size == 42 ){
+        font-size: $font-size-42;
+    }
+    @if ( $size == 46 ){
+        font-size: $font-size-46;
+    }
+
+    line-height: $lineHeight;
+    
+    @if ( type-of($color) == color ){
+        color: $color
+    }
+
+    font-weight: $weight;
+
+}
+
+@mixin pos-center-x($type: absolute) {
+    @if( $type == fixed or $type == absolute ){
+        position: $type;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin pos-center-y($type: absolute) {
+    @if( $type == fixed or $type == absolute ){
+        position: $type;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin pos-center($type: absolute) {
+    @if( $type == fixed or $type == absolute ){
+        position: $type;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin pos-fixed-top($width:100%){
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width:$width;
+}
+
