@@ -1,5 +1,9 @@
-@import url(./_mixin.scss);
+@import './_mixin.scss';
 
 header{
-    @include pos-fixed-top;
+    @include pos-fixed-top(2000);
+    @include theme() {
+        color: theme-get('text-color');
+        background-color: theme-get('bg-color');
+      }
 }

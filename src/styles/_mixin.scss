@@ -1,4 +1,5 @@
 @import './typography';
+@import './variable';
 
 @mixin font-face($name, $file, $weight: normal, $style: normal) {
     @font-face { 
@@ -69,11 +70,28 @@
     }
 }
 
-@mixin pos-fixed-top($width:100%){
+@mixin pos-fixed-top($zindex:auto, $width:100%) {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    width:$width;
+    width:$width; 
+    z-index: $zindex;
+} 
+
+//body가 dark일때는 
+//header가 블랙
+@mixin theme() {
+    @each $theme, $map in $themes {
+        $theme-map: $map !global;
+        .#{$theme} & {
+            @content;
+        }
+    }
+    $theme-map: null !global;
 }
 
+@function theme-get($key) {
+    @return map-get($theme-map, $key);
+    
+}
