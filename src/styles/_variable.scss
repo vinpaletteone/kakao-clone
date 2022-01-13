@@ -3,11 +3,17 @@ $themes: (
     'text-color': #fff,
     'bg-color': #000,
     'icon-bg': #222224,
+    'item-card' : #222224,
+    'item-title-bg' : #444,
+    'item-tag-color' : #777
   ),
   light: (
     'text-color': #000,
     'bg-color': #fff,
-    'icon-bg': #eee
+    'icon-bg': #eee,
+    'item-card' : #fff,
+    'item-title-bg' : #eee,
+    'item-tag-color' : #666
   )
 );
 
@@ -16,4 +22,5 @@ $tablet-min:1023px;
 $mobile-max:767px;
 
 $bg-eee:#eee;
+$bg-bbb:#bbb;
 $color-888:#888;
