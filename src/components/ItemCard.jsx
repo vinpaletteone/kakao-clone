@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function ItemCard() {
     return (
-        <div>
-            itemcard
-        </div>
+        <section className='main-itemCard'>
+            item
+        </section>
     )
 }

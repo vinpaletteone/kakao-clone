@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Title() {
+export default function Title({isDark}) {
     const now = new Date();
     const month = now.getMonth()+1;
     const date = now.getDate();
@@ -8,7 +8,7 @@ export default function Title() {
     const week = ['일', '월', '화', '수', '목', '금', '토'];
  
     const dateImage = {
-        background: `url("https://www.kakaocorp.com/page/calendar/light/ico_date${date}.gif") no-repeat 0 94px / 72px 72px`
+        background: `url("https://www.kakaocorp.com/page/calendar/${!isDark ? 'light' : 'dark'}/ico_date${date}.gif") no-repeat 0 94px / 72px 72px`
     }
     return (
         <section className="main-title">
