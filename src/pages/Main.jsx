@@ -5,9 +5,11 @@ export default function Main() {
     return (
         <>
             <Header />
-            <Title />
-            <ItemCard />
-            <ClickBtn />
+            <main>
+                <Title />
+                <ItemCard />
+                <ClickBtn />
+            </main>
             <Footer />
         </>
     )

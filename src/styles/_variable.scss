@@ -1,10 +1,19 @@
 $themes: (
   dark: (
     'text-color': #fff,
-    'bg-color': #000
+    'bg-color': #000,
+    'icon-bg': #222224,
   ),
   light: (
     'text-color': #000,
-    'bg-color': #fff
+    'bg-color': #fff,
+    'icon-bg': #eee
   )
 );
+
+$tablet-max:1439px;
+$tablet-min:1023px;
+$mobile-max:767px;
+
+$bg-eee:#eee;
+$color-888:#888;

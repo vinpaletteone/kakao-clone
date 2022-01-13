@@ -5,5 +5,102 @@ header{
     @include theme() {
         color: theme-get('text-color');
         background-color: theme-get('bg-color');
-      }
+    }
+    
+    .wrap-header{
+        max-width: 1296px;
+        margin: 0 auto;
+        height: 72px;
+        border-bottom: 1px solid black;
+
+        @include tablet-max{
+            max-width: 952px;
+        }
+
+        @include tablet-min{
+            max-width: 630px;
+            height: 60px;
+        }
+
+        @include mobile-max{
+            max-width: 364px;
+            padding: 0 24px;
+        }
+    }
+
+    .doc-gnb{
+        text-align: center;
+
+        .list_gnb{
+            display: inline-block;
+            margin-left: -74px;
+            @include font-style(16, '', '', bold, -.5px);
+
+            &:hover > li > a{
+                color: $color-888;
+            }
+
+            li{
+                display: inline-block;
+
+                &:hover > a{
+                    @include theme() {
+                        color: theme-get('text-color');
+                    }
+                }
+
+                a{
+                    display: block;
+                    padding: 0 28px;
+                    line-height: 72px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+
+    .area-util{
+        margin-top: -54px;
+
+        button{
+            width: 36px;
+            height: 36px;
+            border-radius: 18px;
+        
+            &:hover{
+                @include theme() {
+                    background: theme-get('icon-bg');
+                }
+            }
+            &+button{
+                margin-left: 15px;
+            }
+            .ico{
+                @include theme() {
+                    stroke: theme-get('text-color');
+                }
+                width: 24px;
+                height: 24px;
+                position: relative;
+                top: 3px;
+            }
+        }
+    }
+
+    .doc-title{
+        padding-top: 24px;
+
+        a{
+            display: block;
+            width: 70px;
+            height: 24px;
+        }
+
+        path{
+            @include theme() {
+                fill: theme-get('text-color');
+            }
+        }
+    }
 }

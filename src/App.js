@@ -2,8 +2,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Main } from './js/routes';
 import 'sass-reset';
 import './styles/_global.scss'
+import { useState } from "react";
 
 function App() {
+  const [isDark, setDark] = useState(false);
+
+  const onChange = ({ target }) => {
+    target.checked ? setDark(true) : setDark(false);
+  }; 
+
   return (
     <>
       <BrowserRouter className="App">

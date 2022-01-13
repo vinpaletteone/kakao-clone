@@ -9,7 +9,7 @@
         font-style: $style; 
     }
 } 
-@mixin font-style($size, $lineHeight, $color: false, $weight:400) {
+@mixin font-style($size, $lineHeight:auto, $color: false, $weight:400, $letterSpacing:auto) {
     @if ( $size == 12 ){
         font-size: $font-size-12;
     }
@@ -42,7 +42,12 @@
     }
 
     font-weight: $weight;
+    letter-spacing: $letterSpacing;
+}
 
+@mixin font-size($size, $letterSpacing){
+    font-size: $size;
+    letter-spacing: $letterSpacing;
 }
 
 @mixin pos-center-x($type: absolute) {
@@ -79,8 +84,6 @@
     z-index: $zindex;
 } 
 
-//body가 dark일때는 
-//header가 블랙
 @mixin theme() {
     @each $theme, $map in $themes {
         $theme-map: $map !global;
@@ -95,3 +98,22 @@
     @return map-get($theme-map, $key);
     
 }
+
+@mixin tablet-max{
+    @media (max-width: #{$tablet-max}) {
+        @content;
+    }
+}
+
+@mixin tablet-min{
+    @media (max-width: #{$tablet-min}) {
+        @content;
+    }
+}
+
+@mixin mobile-max{
+    @media (max-width: #{$mobile-max}) {
+        @content;
+    }
+}
+
