@@ -8,6 +8,10 @@ main{
         color: theme-get('text-color');
         background-color: theme-get('bg-color');
     }
+
+    @include tablet-max{
+        max-width: 952px;
+    }
 }
 
 .main-title{
@@ -59,7 +63,12 @@ main{
                         max-height: 700px;
                         -webkit-transition: all .2s ease-in-out;
                         transition: all .2s ease-in-out;
-    
+
+                        @include tablet-max{
+                            height: calc(100vh - 143px);
+                            // height: calc(100vh - 205px);
+                        }
+                        
                         .wrap-cont{
                             display: block;
                             position: relative;
@@ -105,6 +114,19 @@ main{
                     background-color: theme-get('item-card');
                 }
                 box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 9%);
+
+                &.card-half{
+                    .wrap-cont{
+                        height: 192px;
+                    }
+
+                    .tit-card{
+                        max-height: 56px;
+                        padding: 0;
+                        font-size: 18px;
+                        line-height: 28px;
+                    }
+                }
     
                 .info-cate{
                     display: block;
@@ -167,6 +189,7 @@ main{
                         line-height: 32px;
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 2;
+                        font-weight: bold;
                     }
     
                     .wrap-thumb{
@@ -227,6 +250,51 @@ main{
     
                         .fill{
                             fill: $bg-bbb;
+                        }
+                    }
+                }
+
+                &.item-stock{
+                    .tit-card{
+                        display: block;
+                        max-height: none;
+                        margin-top: 18px;
+                        @include font-style(40, 59px, '', bold, -1px);
+
+                        .num-tit{
+                            display: inline-block;
+                            margin-right: 10px;
+                            vertical-align: top;
+                        }
+
+                        .num-info{
+                            display: inline-block;
+                            margin-top: 20px;
+                            vertical-align: top;
+                            @include font-style(14, 20px, '', 700, 0);
+
+                            .info-arr{
+                                display: inline-block;
+                                overflow: hidden;
+                                width: 8px;
+                                margin: 9px 4px 0 0;
+                                border-top: 3px solid var(--baseForeground);
+                                text-indent: -9999px;
+                                vertical-align: top;
+                                @include font-style(0, 0, '', '', 0);
+                            }
+
+                            &.down{
+                                color: $color-blue;
+
+                                .info-arr{
+                                    width: auto;
+                                    margin-top: 8px;
+                                    border-right: 4px solid transparent;
+                                    border-left: 4px solid transparent;
+                                    border-top: 7px solid $color-blue;
+                                }
+                            }
                         }
                     }
                 }
