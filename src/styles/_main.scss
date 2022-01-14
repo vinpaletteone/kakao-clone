@@ -49,6 +49,16 @@ main{
             max-width: 666px;
             padding: 0 18px;
             box-sizing: border-box;
+
+            @include tablet-max{
+                min-width: 655px;
+                padding: 0 15px;
+
+                &:last-child{
+                    min-width: 0;
+                    max-width: 327px;
+                }
+            }
     
             &:first-child{
                 .inner-item{
@@ -115,19 +125,20 @@ main{
                 }
                 box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 9%);
 
-                &.card-half{
-                    .wrap-cont{
-                        height: 192px;
-                    }
-
-                    .tit-card{
-                        max-height: 56px;
-                        padding: 0;
-                        font-size: 18px;
-                        line-height: 28px;
-                    }
+                .tit-card{
+                    display: block;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    height: 64px;
+                    margin-top: 13px;
+                    padding: 0 24px;
+                    font-size: 22px;
+                    line-height: 32px;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    font-weight: bold;
                 }
-    
+
                 .info-cate{
                     display: block;
                     height: 36px;
@@ -172,25 +183,17 @@ main{
                         vertical-align: top;
                         text-indent: -9999px;
                     }
+
+                    .ico-cate{
+                        display: inline-block;
+                        margin-right: 8px;
+                        vertical-align: top;
+                    }
                 }
     
                 .link-item{
                     display: block;
                     margin: 0 -24px;
-    
-                    .tit-card{
-                        display: block;
-                        display: -webkit-box;
-                        overflow: hidden;
-                        height: 64px;
-                        margin-top: 13px;
-                        padding: 0 24px;
-                        font-size: 22px;
-                        line-height: 32px;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 2;
-                        font-weight: bold;
-                    }
     
                     .wrap-thumb{
                         display: block;
@@ -220,6 +223,13 @@ main{
                     @include theme() {
                         color: theme-get('item-tag-color');
                     }
+
+                    .txt-keyword{
+                        display: inline-block;
+                        margin-right: 3px;
+                        vertical-align: top;
+                    }
+                    
                 }
     
                 .wrap-cont{
@@ -254,6 +264,19 @@ main{
                     }
                 }
 
+                &.card-half{
+                    .wrap-cont{
+                        height: 205px;
+                    }
+
+                    .tit-card{
+                        max-height: 56px;
+                        padding: 0;
+                        font-size: 18px;
+                        line-height: 28px;
+                    }
+                }
+
                 &.item-stock{
                     .tit-card{
                         display: block;
@@ -284,7 +307,7 @@ main{
                                 @include font-style(0, 0, '', '', 0);
                             }
 
-                            &.down{
+                             &.down{
                                 color: $color-blue;
 
                                 .info-arr{
