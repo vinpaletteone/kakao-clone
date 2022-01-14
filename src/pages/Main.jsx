@@ -13,12 +13,25 @@ export default function Main() {
       setDark(e)
     }
 
+    const icon = {
+        "promise" : {
+            "name" : "약속과 책임",
+            "image" : "https://www.kakaocorp.com/page/ico_responsible.png",
+            "description" : "약속과 책임 아이콘"
+        },
+        "stock" : {
+            "name" : "주가정보",
+            "image" : "https://www.kakaocorp.com/page/ico_stock.png",
+            "description" : "주가정보 아이콘"
+        },
+    }
+
     return (
         <>
             <Header isDark={isDark} setDarkProps={e => setDarkProps(e)} />
             <main>
                 <Title isDark={isDark} />
-                <ItemCard />
+                <ItemCard icon={icon} />
                 <ClickBtn />
             </main>
             <Footer />
