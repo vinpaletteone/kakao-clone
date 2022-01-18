@@ -11,14 +11,14 @@ export default function Item({item, itemNew}) {
                     {(itemNew && itemNew==='Y') && <span className="dot-new">new</span>}
                 </span>
                 <a href="/" className='link-item'>
-                    <strong className="tit-card">{item.title}</strong>
+                    <strong className="tit-card" dangerouslySetInnerHTML={{__html:item.title}}></strong>
                     <span className="wrap-thumb">
                         <img src={item.image} alt={item.imageDescription} className="thumb-img" />
                     </span>
                 </a>
                 <span role="text" className="info-card">
                     {item.keywordList.map(item => (
-                        <span className="txt-keyword">#{item.name}</span>)
+                        <span key={item.keywordIdx} className="txt-keyword">#{item.name}</span>)
                     )}
                 </span>
             </span>
