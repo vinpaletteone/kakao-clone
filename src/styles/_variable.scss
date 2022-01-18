@@ -5,7 +5,12 @@ $themes: (
     'icon-bg': #222224,
     'item-card' : #222224,
     'item-title-bg' : #444,
-    'item-tag-color' : #777
+    'item-tag-color' : #777,
+    'list-li-color' : #fff,
+    'list-li-bg' : #333,
+    'footer-border' : #111,
+    'footer-bg' : #111,
+    'footer-span-color' : #fafafa
   ),
   light: (
     'text-color': #000,
@@ -13,7 +18,12 @@ $themes: (
     'icon-bg': #eee,
     'item-card' : #fff,
     'item-title-bg' : #eee,
-    'item-tag-color' : #666
+    'item-tag-color' : #666,
+    'list-li-color' : #666,
+    'list-li-bg' : #f4f4f4,
+    'footer-border' : #ebebeb,
+    'footer-bg' : #fff,
+    'footer-span-color' : #000
   )
 );
 

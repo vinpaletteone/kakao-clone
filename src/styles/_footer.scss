@@ -1,0 +1,97 @@
+@import './_mixin.scss';
+@import './variable';
+
+footer{
+     @include theme() {
+        background-color: theme-get('footer-bg');
+        border-top: 1px solid theme-get('footer-border');
+    }
+
+    .inner-footer{
+        max-width: 1296px;
+        margin: 0 auto;
+        padding: 37px 0 48px;
+
+        .section-service{
+            .wrap-service{
+                float: left;
+                width: 16.666%;
+
+                .tit-service{
+                    display: block;
+
+                    a{
+                        font-weight: 700;
+                        line-height: 20px;
+                        letter-spacing: -.2px;
+                        @include theme() {
+                            color:  theme-get('text-color');
+                        }
+
+                        span{
+                            font-weight: 700;
+                            line-height: 20px;
+                            letter-spacing: -.2px;
+                            @include theme() {
+                                color:  theme-get(' footer-span-color');
+                            }
+                        }
+                    }
+                }
+            }
+
+            .group_service{
+                float: left;
+                width: 16.666%;
+
+                .wrap-service{
+                    float: none;
+                    width: 100%;
+
+                    .tit-service{
+                        display: block;
+
+                        a{
+                            font-weight: 700;
+                            line-height: 20px;
+                            letter-spacing: -.2px;
+                            @include theme() {
+                                color:  theme-get('text-color');
+                            }
+                        }
+                    }
+
+                    &~.tit-service{
+                        margin-top: 36px;
+                    }
+                }
+            }
+
+            .list-service{
+                li{
+                    margin-top: 12px;
+
+                    a{
+                        line-height: 20px;
+                        letter-spacing: -.2px;
+                        color: $color-888;
+                    }
+                }
+            }
+
+            .ico-arrow{
+                display: none;
+            }
+
+            .ico-outlink{
+                margin: 6px 0 0 4px;
+                stroke: #999;
+            }
+        }
+    }
+
+    .ico-outlink{
+        width: 9px;
+        height: 9px;
+    }
+}
