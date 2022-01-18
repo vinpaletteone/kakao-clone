@@ -55,15 +55,13 @@
     ],
     "main7DaysAfterList" : [
         {
-            "title": "&lsquo;142억뷰&rsquo; 카카오엔터 슈퍼 IP &lsquo;나 혼자만 레벨업&rsquo; NFT 최초 발행<br>12일 클립 드롭스 론칭, &lsquo;글로벌 대작&rsquo; 명성 잇는다",
+            "title": "&lsquo;142억뷰&rsquo; 카카오엔터 슈퍼 IP &lsquo;나 혼자만 레벨업&rsquo; NFT 최초 발행<br />12일 클립 드롭스 론칭, &lsquo;글로벌 대작&rsquo; 명성 잇는다",
             "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/331004ac017e00001.jpg",
             "imageDescription": "나 혼자만 레벨업 한 장면",
-            "category": [
-                {
-                    "name": "보도자료",
-                    "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png"
-                }
-            ],
+            "category": {
+                "name": "보도자료",
+                "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png"
+            },
             "keywordList" : [
                 {
                     "keywordIdx": 1627,
@@ -81,15 +79,13 @@
             "contentType": "NEWS"
         },
         {
-            "title": "지갑 없는 세상의 시작점, 카카오톡 지갑",
+            "title": "지갑 없는 세상의 시작점,<br /> 카카오톡 지갑",
             "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/history/3247712c017e00001.jpg",
             "imageDescription": "카카오톡 지갑 상징 이미지",
-            "category": [
-                {
-                    "name": "히스토리",
-                    "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562b710017800001.png"
-                  }
-            ],
+            "category": {
+                "name": "히스토리",
+                "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562b710017800001.png"
+            },
             "keywordList" : [
                 {
                     "keywordIdx": 2194,
