@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import Culture from '../components/Culture';
-import itemCard2 from '../components/itemCard2';
-import { Header, Footer, Title, ItemCard, ClickBtn } from '../js/component';
+import { Header, Footer, Title, ItemCard, ClickBtn, Culture, ItemCard2 } from '../js/component';
 import '../styles/_main.scss'
 
 export default function Main() {
@@ -36,7 +34,7 @@ export default function Main() {
                 <ItemCard icon={icon} />
                 <Culture />
                 <ClickBtn />
-                <itemCard2 />
+                <ItemCard2 />
             </main>
             <Footer />
         </>
