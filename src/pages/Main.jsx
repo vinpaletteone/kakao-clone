@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Culture from '../components/Culture';
+import itemCard2 from '../components/itemCard2';
 import { Header, Footer, Title, ItemCard, ClickBtn } from '../js/component';
 import '../styles/_main.scss'
 
@@ -32,7 +34,9 @@ export default function Main() {
             <main>
                 <Title isDark={isDark} />
                 <ItemCard icon={icon} />
+                <Culture />
                 <ClickBtn />
+                <itemCard2 />
             </main>
             <Footer />
         </>
