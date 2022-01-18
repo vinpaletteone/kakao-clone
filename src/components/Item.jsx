@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Item({item, itemNew}) {
-    console.log(item);
+    // console.log(item);
     return (
         <div className="item-card">
             <span className="wrap-cont">

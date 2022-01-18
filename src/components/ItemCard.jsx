@@ -3,12 +3,7 @@ import dummy from '../db/mainItem.json'
 import Item from './Item';
 
 export default function ItemCard({icon}) {
-    console.log(dummy);
-    console.log(dummy.main7DaysBeforeList);
     const beforeList = dummy.main7DaysBeforeList;
-    
-    console.log(beforeList);
-    // console.log(beforeList[0]);
     return (
         <section className='main-itemCard'>
             <div className="section-main">
@@ -21,7 +16,7 @@ export default function ItemCard({icon}) {
                     <div className="inner-item">
                         {
                             beforeList.map((item, index) => {
-                              return index!==0 && <Item item={item} />
+                              return index!==0 && <Item key={index} item={item} />
                             })
                         }
                         <div className="item-card card-half item-stock">
