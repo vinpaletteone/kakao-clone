@@ -1,140 +1,110 @@
-[
-	{
-		"title": "카카오, 공동체 임원 주식 매도 규정안 마련",
-		"image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/51de11ea017e00001.png",
-        "imageDescription": "노란색 바탕의 카카오 영문 로고",
-		"category": [
-            {
+{
+    "main7DaysBeforeList" : [
+        {
+            "title": "카카오가 안전한 디지털 세상을 위해 어린이들과 고민을 나누다",
+            "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/6af56b10017e00001.jpg",
+            "imageDescription": "화상회의로 접속한 유니세프 아동의회 어린이들의 모습과 유니세프 로고 조형물",
+            "category": {
+                "name": "지속가능경영",
+                "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/322d2261017a00001.png"
+           },
+            "keywordList" : [
+                {
+                    "keywordIdx": 2206,
+                    "name": "아동청소년"
+                },
+                {
+                    "keywordIdx": 2207,
+                    "name": "digital for kids"
+                },
+                {
+                    "keywordIdx": 2208,
+                    "name": "유니세프"
+                }
+            ],
+            "contentType": "NEWS"
+        },
+        {
+            "title": "카카오, 공동체 임원 주식 매도 규정안 마련",
+            "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/51de11ea017e00001.png",
+            "imageDescription": "노란색 바탕의 카카오 영문 로고",
+            "category": {
                 "name": "보도자료",
                 "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png"
-              }
-        ],
-        "keywordList" : [
-            {
-                "keywordIdx": 2202,
-                "name": "CAC"
-            },
-            {
-                "keywordIdx": 2203,
-                "name": "규정안"
-            },
-            {
-                "keywordIdx": 2204,
-                "name": "임원주식매도"
-            },
-            {
-                "keywordIdx": 2205,
-                "name": "카카오계열사"
-            }
-        ],
-        "contentType": "NEWS",
-        "main7DaysAfterList" : "N"
-	},
-    {
-		"title": "&lsquo;142억뷰&rsquo; 카카오엔터 슈퍼 IP &lsquo;나 혼자만 레벨업&rsquo; NFT 최초 발행<br>12일 클립 드롭스 론칭, &lsquo;글로벌 대작&rsquo; 명성 잇는다",
-		"image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/331004ac017e00001.jpg",
-        "imageDescription": "나 혼자만 레벨업 한 장면",
-		"category": [
-            {
-                "name": "보도자료",
-                "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png"
-              }
-        ],
-        "keywordList" : [
-            {
-                "keywordIdx": 1627,
-                "name": "카카오엔터테인먼트"
-            },
-            {
-                "keywordIdx": 1554,
-                "name": "그라운드X"
-            },
-            {
-                "keywordIdx": 2196,
-                "name": "NFT"
-            }
-        ],
-        "contentType": "NEWS"
-	},
-    {
-		"title": "지갑 없는 세상의 시작점, 카카오톡 지갑",
-		"image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/history/3247712c017e00001.jpg",
-        "imageDescription": "카카오톡 지갑 상징 이미지",
-		"category": [
-            {
-                "name": "히스토리",
-                "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562b710017800001.png"
-              }
-        ],
-        "keywordList" : [
-            {
-                "keywordIdx": 2194,
-                "name": "디지털 자격증"
-            },
-            {
-                "keywordIdx": 2193,
-                "name": "카카오 인증서"
-            },
-            {
-                "keywordIdx": 2192,
-                "name": "톡 지갑"
-            }
-        ],
-        "contentType": "HISTORY",
-        "main7DaysAfterList" : "N"
-	},
-    {
-		"title": "카카오, 미래이니셔티브센터 신규 임원 선임",
-		"image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/1d370636017e00001.jpg",
-        "imageDescription": "흰색 배경에 까만색 영문 카카오 글자가 있는 로고 이미지",
-		"category": [
-            {
-                "name": "보도자료",
-                "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png"
-              }
-        ],
-        "keywordList" : [
-            {
-                "keywordIdx": 2113,
-                "name": "미래이니셔티브센터"
-            },
-            {
-                "keywordIdx": 2114,
-                "name": "남궁훈"
-            },
-            {
-                "keywordIdx": 2190,
-                "name": "임원인사"
-            }
-        ],
-        "contentType": "NEWS",
-        "main7DaysAfterList" : "N"
-	},
-    {
-		"title": "카카오, 미래이니셔티브센터 신규 임원 선임",
-		"image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/1d370636017e00001.jpg",
-        "imageDescription": "흰색 배경에 까만색 영문 카카오 글자가 있는 로고 이미지",
-		"category": [
-            {
-                "name": "보도자료",
-                "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png"
-              }
-        ],
-        "keywordList" : [
-            {
-                "keywordIdx": 2113,
-                "name": "미래이니셔티브센터"
-            },
-            {
-                "keywordIdx": 2114,
-                "name": "남궁훈"
-            },
-            {
-                "keywordIdx": 2190,
-                "name": "임원인사"
-            }
-        ],
-        "contentType": "NEWS",
-        "main7DaysAfterList" : "Y"
-	}
-]
+           },
+            "keywordList" : [
+                {
+                    "keywordIdx": 2202,
+                    "name": "CAC"
+                },
+                {
+                    "keywordIdx": 2203,
+                    "name": "규정안"
+                },
+                {
+                    "keywordIdx": 2204,
+                    "name": "임원주식매도"
+                },
+                {
+                    "keywordIdx": 2205,
+                    "name": "카카오계열사"
+                }
+            ],
+            "contentType": "NEWS"
+        }
+    ],
+    "main7DaysAfterList" : [
+        {
+            "title": "&lsquo;142억뷰&rsquo; 카카오엔터 슈퍼 IP &lsquo;나 혼자만 레벨업&rsquo; NFT 최초 발행<br>12일 클립 드롭스 론칭, &lsquo;글로벌 대작&rsquo; 명성 잇는다",
+            "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/331004ac017e00001.jpg",
+            "imageDescription": "나 혼자만 레벨업 한 장면",
+            "category": [
+                {
+                    "name": "보도자료",
+                    "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562f7bc017800001.png"
+                }
+            ],
+            "keywordList" : [
+                {
+                    "keywordIdx": 1627,
+                    "name": "카카오엔터테인먼트"
+                },
+                {
+                    "keywordIdx": 1554,
+                    "name": "그라운드X"
+                },
+                {
+                    "keywordIdx": 2196,
+                    "name": "NFT"
+                }
+            ],
+            "contentType": "NEWS"
+        },
+        {
+            "title": "지갑 없는 세상의 시작점, 카카오톡 지갑",
+            "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/history/3247712c017e00001.jpg",
+            "imageDescription": "카카오톡 지갑 상징 이미지",
+            "category": [
+                {
+                    "name": "히스토리",
+                    "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562b710017800001.png"
+                  }
+            ],
+            "keywordList" : [
+                {
+                    "keywordIdx": 2194,
+                    "name": "디지털 자격증"
+                },
+                {
+                    "keywordIdx": 2193,
+                    "name": "카카오 인증서"
+                },
+                {
+                    "keywordIdx": 2192,
+                    "name": "톡 지갑"
+                }
+            ],
+            "contentType": "HISTORY"
+        }
+    ]
+}
