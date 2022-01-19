@@ -40,29 +40,25 @@ footer{
                 }
             }
 
-            .group_service{
-                float: left;
-                width: 16.666%;
+            .group-service{
+                .tit-service{
+                    display: block;
+                    padding-top: 36px;
 
-                .wrap-service{
-                    float: none;
-                    width: 100%;
+                    a{
+                        font-weight: 700;
+                        line-height: 20px;
+                        letter-spacing: -.2px;
+                        @include theme() {
+                            color:  theme-get('text-color');
+                        }
 
-                    .tit-service{
-                        display: block;
-
-                        a{
-                            font-weight: 700;
-                            line-height: 20px;
-                            letter-spacing: -.2px;
+                        .ico-outlink{
+                            stroke-width: 1;
                             @include theme() {
-                                color:  theme-get('text-color');
+                                stroke:  theme-get('footer-outline');
                             }
                         }
-                    }
-
-                    &~.tit-service{
-                        margin-top: 36px;
                     }
                 }
             }
@@ -85,13 +81,185 @@ footer{
 
             .ico-outlink{
                 margin: 6px 0 0 4px;
-                stroke: #999;
             }
+        }
+
+        .section-relation{
+            margin-top: 120px;
+
+            .group-info{
+                float: left;
+
+                .wrap-info{
+                    float: left;
+                    position: relative;
+                    line-height: 18px;
+
+                    .link-info{
+                        font-size: 12px;
+                        letter-spacing: -.2px;
+                        color: $color-888;
+
+                        .ico-arrow{
+                            width: 9px;
+                            height: 9px;
+                            margin: 0 0 0 4px;
+
+                            .stroke{
+                                stroke: #999;
+                            }
+                        }
+
+                        &.link-emph{
+                            font-weight: bold;
+                            @include theme(){
+                                color: theme-get('footer-link-emph');
+                            }
+                        }
+                    }
+
+                    &.info-open{
+                        .link-info{
+                            @include theme(){
+                                color: theme-get('footer-linkinfo');
+                            }
+
+                            .ico-arrow{
+                                -webkit-transform: rotate(-180deg);
+                                transform: rotate(-180deg);
+
+                                .stroke{
+                                    @include theme(){
+                                        stroke: theme-get('footer-stroke');
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &+.wrap-info{
+                        margin-left: 24px;
+                    }
+
+                    &:nth-child(n+6){
+                        @include tablet-max(){
+                            margin-top: 6px;
+                        }
+                    }
+
+                    &:nth-child(6){
+                        @include tablet-max(){
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+                @include tablet-max(){
+                    width: 532px;
+                }
+            }
+
+            .wrap-relation{
+                float: right;
+                position: relative;
+                width: 208px;
+
+                .tit-relation{
+                    a{
+                        display: block;
+                        padding: 10px 20px 12px;
+                        border-radius: 24px;
+                        line-height: 18px;
+                        font-weight: bold;
+                        letter-spacing: -.2px;
+                        font-size: 13px;
+                        @include theme(){
+                            background-color: theme-get('icon-bg');
+                            color: theme-get('footer-span-color');
+                        }
+
+                        .ico-plus{
+                            float: right;
+                            width: 14px;
+                            height: 14px;
+                            margin-top: 3px;
+                        }
+                    }
+                }
+
+                &.info-open{
+                    .ico-plus{
+                        -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                .list-subinfo{
+                    width: 100%;
+                    bottom: 52px;
+                }
+
+                @include tablet-max(){
+                    width: 298px;
+                }
+            }
+
+            .list-subinfo{
+                display: none;
+                position: absolute;
+                bottom: 30px;
+                left: 0;
+                padding: 16px 0;
+                border-radius: 12px;
+                @include theme(){
+                    background-color: theme-get('icon-bg');
+                }
+
+                a{
+                    display: block;
+                    padding: 0 20px;
+                    white-space: nowrap;
+                    @include theme(){
+                        color: theme-get('footer-info-li');
+                    }
+
+                    .ico-outlink{
+                        margin: 0 0 -1px 5px;
+                    }
+                }
+
+                li+li{
+                    margin-top: 12px;
+                }
+            }
+        }
+
+        @include tablet-max(){
+            max-width: 952px;
+            padding-top: 36px;
         }
     }
 
     .ico-outlink{
         width: 9px;
         height: 9px;
+        stroke: #999;
+    }
+
+    .ico-plus{
+        @include theme(){
+            fill: theme-get('ico-plus');
+        }
+    }
+
+    .txt-copyright{
+        display: block;
+        font-size: 12px;
+        color: $color-888;
+        clear: both;
+
+        @include tablet-max(){
+            padding-top: 12px;
+        }
     }
 }

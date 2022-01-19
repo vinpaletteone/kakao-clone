@@ -4,6 +4,9 @@
 main{
     margin: 0 auto;
     max-width: 1296px;
+    padding-bottom: 182px;
+    position: relative;
+    
     @include theme() {
         color: theme-get('text-color');
         background-color: theme-get('bg-color');
@@ -26,12 +29,19 @@ main{
     
     .wrap-fit{
         .tit-main {
+            background-repeat: no-repeat;
+            background-size: 72px 72px;
+            background-position: 0 94px;
             padding-top: 96px;
             @include font-style(46, 66px, '', bold, -1px);
 
             .emph-tit{
                 display: block;
                 padding-left: 84px;
+
+                @include tablet-max{
+                    padding-left: 68px;
+                }
             }
 
             @include tablet-max{
@@ -41,6 +51,8 @@ main{
                 background-position-y: 72px;
                 background-size: 56px 56px;
             }
+
+          
         }
     }
 }
@@ -50,6 +62,10 @@ main{
 
     &:not(.itemCard2){
         padding: 96px 0 0;
+        @include tablet-max{
+            margin: 0 -15px;
+            padding-top: 42px;
+        }
     }
 
     .section-main{
@@ -419,12 +435,6 @@ main{
             margin-top: 0;
         }
     }
-
-    @include tablet-max{
-        margin: 0 -15px;
-        padding-top: 0;
-    }
-
 }
 
 .hide-header{

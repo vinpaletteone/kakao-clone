@@ -10,7 +10,16 @@ $themes: (
     'list-li-bg' : #333,
     'footer-border' : #111,
     'footer-bg' : #111,
-    'footer-span-color' : #fafafa
+    'footer-span-color' : #fafafa,
+    'footer-outline': #fafafa,
+    'footer-linkinfo' : #f3f3f3,
+    'footer-stroke' : #f3f3f3,
+    'footer-info-li' : #999,
+    'footer-link-emph' : #bbb,
+    'ico-plus' : #ebebeb,
+    'ico-share' : #333,
+    'ico-share-path': #fff,
+    'header-feature-border': #333
   ),
   light: (
     'text-color': #000,
@@ -23,7 +32,16 @@ $themes: (
     'list-li-bg' : #f4f4f4,
     'footer-border' : #ebebeb,
     'footer-bg' : #fff,
-    'footer-span-color' : #000
+    'footer-span-color' : #000,
+    'footer-outline' : #333,
+    'footer-linkinfo' : #111,
+    'footer-stroke' : #000,
+    'footer-info-li' : #666,
+    'footer-link-emph' : #333,
+    'ico-plus' : #666,
+    'ico-share' : #eee,
+    'ico-share-path': #333,
+    'header-feature-border': #eee
   )
 );
 
