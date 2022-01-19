@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Logo() {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="layer" viewBox="0 0 600 182.39999" className="width100 height100">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="layer" viewBox="0 0 600 182.39999" className="width100 height100 ico-logo">
             <defs id="defs25"/>
             <g id="g6" transform="translate(-26.7,-234.9)">
                 <g id="g4">
