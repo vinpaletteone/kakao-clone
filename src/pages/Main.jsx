@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { Header, Footer, Title, ItemCard, ClickBtn, Culture, ItemCard2, Etc } from '../js/component';
+import LinkTop from '../components/Layout/LinkTop';
+import { Header, Footer, Title, ItemCard, ClickBtn, Culture, ItemCard2, Etc, HeaderFeature, SearchLayer} from '../js/component';
 import '../styles/_main.scss'
 
 export default function Main() {
+    const headerTitle = '오늘의 카카오';
     const [isDark, setDark] = useState(false);
 
     const onChange = ({ target }) => {
@@ -36,17 +38,32 @@ export default function Main() {
         }
     }
 
+    const now = new Date();
+    const month = now.getMonth()+1;
+    const date = now.getDate();
+    const day = now.getDay();
+    const week = ['일', '월', '화', '수', '목', '금', '토'];
+
+    const imageUrl = `https://www.kakaocorp.com/page/calendar/${!isDark ? 'light' : 'dark'}/ico_date${date}.gif`;
+    
+    const dateImage = {
+        backgroundImage: `url(${imageUrl})`
+    }
+
     return (
         <>
             <Header isDark={isDark} setDarkProps={e => setDarkProps(e)} />
+            <HeaderFeature imageUrl={imageUrl} day={week[day]} headerTitle={headerTitle}/>
             <main>
-                <Title isDark={isDark} />
+                <Title date={date} month={month} day={week[day]} dateImage={dateImage} headerTitle={headerTitle}/>
                 <ItemCard icon={icon} />
                 <Culture />
                 <ItemCard2 icon={icon} />
                 <Etc />
                 <ClickBtn />
+                <LinkTop />
             </main>
+            {/* <SearchLayer /> */}
             <Footer />
         </>
     )
