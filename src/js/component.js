@@ -1,4 +1,6 @@
 export { default as Header } from '../components/Layout/Header'
+export { default as HeaderFeature } from '../components/Layout/HeaderFeature'
+export { default as SearchLayer } from '../components/Layout/SearchLayer'
 export { default as Footer } from '../components/Layout/Footer';
 export { default as Title } from '../components/Title'
 export { default as ItemCard } from '../components/ItemCard'
