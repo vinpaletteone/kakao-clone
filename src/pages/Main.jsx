@@ -63,7 +63,7 @@ export default function Main() {
                 <ClickBtn />
                 <LinkTop />
             </main>
-            {/* <SearchLayer /> */}
+            <SearchLayer />
             <Footer />
         </>
     )
