@@ -24,7 +24,10 @@ header{
 
         @include mobile-max{
             max-width: 364px;
-            padding: 0 24px;
+        }
+
+        @include mobile-min{
+            margin: 0 24px;
         }
 
     }
@@ -102,6 +105,40 @@ header{
             @include theme() {
                 fill: theme-get('text-color');
             }
+        }
+
+        @include mobile-max{
+            padding-top: 18px;
+        }
+    }
+
+    &.type2{
+        .btn-hamburger{
+            margin-left: 24px;
+        }
+
+        .btn-hamburger,
+        .btn-search{
+            float: right;
+            margin-top: 16px;
+
+            .stroke,
+            .ico-search{
+                @include theme(){
+                    stroke:theme-get('text-color')
+                }
+            }
+
+            .fill{
+                @include theme(){
+                    fill:theme-get('text-color')
+                }
+            }
+        }
+
+        [class^=ico-]{
+            width: 28px;
+            height: 28px;
         }
     }
 }

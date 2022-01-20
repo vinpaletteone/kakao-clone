@@ -19,7 +19,11 @@ $themes: (
     'ico-plus' : #ebebeb,
     'ico-share' : #333,
     'ico-share-path': #fff,
-    'header-feature-border': #333
+    'header-feature-border': #333,
+    'footer-ico':#fff,
+    'footer-ul-border':#333,
+    'footer-li-a':#888,
+    'footer-group-ico':#fff
   ),
   light: (
     'text-color': #000,
@@ -41,15 +45,21 @@ $themes: (
     'ico-plus' : #666,
     'ico-share' : #eee,
     'ico-share-path': #333,
-    'header-feature-border': #eee
+    'header-feature-border': #eee,
+    'footer-ico':#888,
+    'footer-ul-border':#e6e6e6,
+    'footer-li-a':#666,
+    'footer-group-ico':#888
   )
 );
 
 $tablet-max:1439px;
 $tablet-min:1023px;
 $mobile-max:767px;
+$mobile-min:411px;
 
 $bg-eee:#eee;
 $bg-bbb:#bbb;
 $color-888:#888;
 $color-blue:#2879ff;
+$color-red:#ff3b3b;

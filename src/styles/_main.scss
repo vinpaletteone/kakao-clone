@@ -6,6 +6,12 @@ main{
     max-width: 1296px;
     padding-bottom: 182px;
     position: relative;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: -webkit-transform .5s cubic-bezier(.59,.01,.28,1);
+    transition: -webkit-transform .5s cubic-bezier(.59,.01,.28,1);
+    transition: transform .5s cubic-bezier(.59,.01,.28,1);
+    transition: transform .5s cubic-bezier(.59,.01,.28,1),-webkit-transform .5s cubic-bezier(.59,.01,.28,1);
     
     @include theme() {
         color: theme-get('text-color');
@@ -14,6 +20,20 @@ main{
 
     @include tablet-max{
         max-width: 952px;
+    }
+
+    @include tablet-min{
+        padding-bottom: 344px;
+        max-width: 630px;
+    }
+
+    @include mobile-max{
+        max-width: 364px;
+        padding-bottom: 172px;
+    }
+
+    @include mobile-min{
+        margin: 0 24px;
     }
 
     .ico-arr{
@@ -42,6 +62,10 @@ main{
                 @include tablet-max{
                     padding-left: 68px;
                 }
+
+                @include tablet-min{
+                    padding-left: 50px;
+                }
             }
 
             @include tablet-max{
@@ -52,8 +76,18 @@ main{
                 background-size: 56px 56px;
             }
 
-          
+            @include tablet-max{
+                padding-top: 48px;
+                font-size: 30px;
+                line-height: 40px;
+                background-position-y: 48px;
+                background-size: 40px 40px;
+            }
         }
+    }
+
+    @include tablet-min(){
+        padding-top: 60px;
     }
 }
 
@@ -65,6 +99,10 @@ main{
         @include tablet-max{
             margin: 0 -15px;
             padding-top: 42px;
+        }
+
+        @include tablet-min{
+            padding: 12px 0 0 0;
         }
     }
 
@@ -103,6 +141,12 @@ main{
                             // height: calc(100vh - 143px);
                             height: calc(100vh - 205px);
                         }
+
+                        @include tablet-min{
+                            height: 700px;
+                            -webkit-transition: none;
+                            transition: none;
+                        }
                         
                         .wrap-cont{
                             height: 100%;
@@ -117,25 +161,50 @@ main{
                                     font-size: 32px;
                                     line-height: 46px;
                                     letter-spacing: -1px;
+
+                                    @include mobile-max{
+                                        max-height: none;
+                                        height: 72px;
+                                        font-size: 26px;
+                                        line-height: 36px;
+                                    }
                                 }
     
                                 .wrap-thumb{
                                     margin-top: 63px;
                                     height: calc(100% - 156px);
+
+                                    @include mobile-max{
+                                        height: auto;
+                                        margin-top: 66px;
+                                    }
                                 }
                             }
     
                             .info-card{
-                                top: 162px;
+                                top: 143px;
                                 margin-top: 24px;
                                 font-size: 14px;
                             }
+                        }
+
+                        @include mobile-max{
+                            height: auto;
                         }
                     }
                 }
             }
     
             .item-card{
+                @include tablet-max{
+                    margin-top: 30px;
+                }
+
+                @include tablet-min{
+                    width: calc(50% - 18px);
+                    margin-top: 36px;
+                }
+
                 overflow: hidden;
                 position: relative;
                 width: 297px;
@@ -160,6 +229,12 @@ main{
                     font-weight: bold;
                     @include theme() {
                         color: theme-get('text-color');
+                    }
+
+                    @include mobile-max{
+                        height: 72px;
+                        font-size: 26px;
+                        line-height: 36px;
                     }
                 }
 
@@ -228,6 +303,11 @@ main{
                             display: block;
                             width: 100%;
                             min-height: 100%;
+                        }
+
+                        @include mobile-max{
+                            height: auto;
+                            margin-top: 66px;
                         }
                     }
                 }
@@ -299,6 +379,10 @@ main{
                         font-size: 18px;
                         line-height: 28px;
                     }
+
+                    @include mobile-max{
+                        height: 220px;
+                    }
                 }
 
                 &.item-stock{
@@ -342,6 +426,41 @@ main{
                                     border-top: 7px solid $color-blue;
                                 }
                             }
+
+                            &.up{
+                                color: $color-red;
+
+                                .info-arr{
+                                    width: auto;
+                                    margin-top: 6px;
+                                    border-color: currentcolor transparent $color-red;
+                                    border-style: none solid solid;
+                                    border-width: 0 4px 7px;
+                                }
+                            }
+                        }
+                    }
+
+                    .info-card{
+                        top: 146px;
+                        margin: 12px 0 0;
+                    }
+
+                    @include mobile-max{
+                        .wrap-cont{
+                            height: auto;
+                            min-height: 220px;
+                            padding-bottom: 24px;
+                            box-sizing: border-box;
+                        }
+
+                        .tit-card{
+                            height: auto;
+                            max-height: none;
+                            margin-top: 27px;
+                            font-size: 52px;
+                            line-height: 65px;
+                            letter-spacing: -1px;
                         }
                     }
                 }
@@ -371,6 +490,14 @@ main{
                             background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M0 0c3.003 2.178 4.963 5.706 4.961 9.699V18H18C18 8.059 9.941 0 0 0' fill='%23fee102' fillRule='evenodd'/%3E%3C/svg%3E");
                             content: "";
                         }
+
+                        @include mobile-max{
+                            height: auto;
+                            padding: 12px 25px 12px 30px;
+                            border-radius: 20px;
+                            font-size: 18px;
+                            line-height: 28px;
+                        }
                     }
                 }
 
@@ -396,12 +523,60 @@ main{
                             background-color: theme-get('list-li-bg');
                         }
                     }
+
+                    @include mobile-max{
+                        margin: 16px -24px 0;
+
+                        li{
+                            margin: 0 6px;
+
+                            .link-cs{
+                                height: 52px;
+                                padding: 0 24px;
+                                border-radius: 52px;
+                                font-size: 18px;
+                                line-height: 52px;
+                                letter-spacing: -1px;
+                            }
+                        }
+                    }
                 }
 
                 &:nth-child(-n+2) {
                     margin-top: 0;
                     @include tablet-max{
                         margin-top: 30px;
+                    }
+
+                    @include tablet-min{
+                        margin-top: 36px;
+                    }
+                }
+                
+                @include mobile-max{
+                    position: relative!important;
+                    top: auto!important;
+                    left: auto!important;
+                    width: 100%;
+
+                    &:not(.card-full):not(.item-stock):not(.item-customer){
+                        .wrap-cont{
+                            .tit-card{
+                                max-height: 72px;
+                                margin-top: 13px;
+                                font-size: 26px;
+                                line-height: 36px;
+                                letter-spacing: 0;
+                            }
+                        }
+                    }
+
+                    &:not(.card-full){
+                        .wrap-cont{
+                            .info-card{
+                                margin-top: 24px;
+                            }
+                        }
                     }
                 }
             }
@@ -419,6 +594,30 @@ main{
                     max-width: 327px;
                 }
             }
+
+            @include tablet-min{
+                &:last-child{
+                    max-width: 100%;
+                }
+            }
+
+            @include mobile-max{
+                -webkit-box-flex: 0;
+                -ms-flex: none;
+                flex: none;
+                min-width: 0;
+            }
+        }
+
+        @include tablet-min{
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        @include mobile-max{
+            display: block;
         }
     }
 
@@ -429,6 +628,13 @@ main{
             -webkit-box-direction: reverse;
             -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+  
+            @include tablet-min{
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
         }
 
         .item-card{
@@ -483,7 +689,18 @@ main{
         color: #000;
 
         br{
-            display: none;
+            display: block;
+        }
+
+        @include tablet-min{
+            font-size: 36px;
+            line-height: 52px;
+        }
+
+        @include mobile-max{
+            margin: 0 -32px;
+            font-size: 30px;
+            line-height: 40px;
         }
     }
 
@@ -501,6 +718,10 @@ main{
         .ico-arr{
             margin-top: 4px;
         }
+
+        @include tablet-min{
+            margin-top: 24px;
+        }
     }
 
     .thumb-culture{
@@ -509,14 +730,43 @@ main{
         max-width: 900px;
         height: auto;
         margin: 50px auto 0;
-    }
 
-    &.thumb-culture_s{
-        display: none;
+        @include tablet-min{
+            max-width: 420px;
+            margin-top: 44px;
+        }
+
+        &.thumb-culture-s{
+            display: none;
+
+            @include tablet-min{
+                display:block
+            }
+        }
+    
+        &.thumb-culture-l{
+            @include tablet-min{
+                display: none;
+            }
+        }
+
+        @include mobile-max{
+            margin-top: 22px;
+        }
     }
 
     @include tablet-max{
         margin: 30px 0 0 0;
+    }
+
+    @include tablet-min{
+        height: auto;
+        margin-top: 36px;
+        padding: 48px 52px 38px;
+    }
+
+    @include mobile-max{
+        padding: 36px 52px 20px;
     }
 }
 
@@ -545,6 +795,11 @@ main{
                 color: #000;
                 word-break: keep-all;
                 @include font-style(32, 44px, '', bold);
+
+                @include mobile-max{
+                    font-size: 26px;
+                    line-height: 36px;
+                }
             }
 
             .txt-item{
@@ -568,6 +823,10 @@ main{
                 @include tablet-max{
                     background-size: 130px 130px;
                 }
+
+                @include tablet-min{
+                    background-size: 160px 160px;
+                }
             }
 
             &.link-recruit{
@@ -590,6 +849,33 @@ main{
 
             .ico-arr{
                 margin-top: 4px;
+            }
+
+            @include tablet-max{
+                background-position: calc(100% - 34px) calc(100% - 34px);
+            }
+
+            @include tablet-min{
+                background-position: calc(100% - 40px) calc(100% - 40px);
+            }
+
+            @include mobile-max{
+                background-size: 140px 140px;
+                height: 484px;
+                background-position: calc(100% - 32px) calc(100% - 32px);
+            }
+        }
+
+        @include tablet-max{
+            padding: 0 15px 0 18px;
+        }
+
+        @include tablet-min{
+            float: none;
+            width: 100%;
+
+            &:first-child{
+                padding-bottom: 36px;
             }
         }
     }

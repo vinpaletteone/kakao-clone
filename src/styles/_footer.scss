@@ -36,6 +36,41 @@ footer{
                                 color:  theme-get(' footer-span-color');
                             }
                         }
+
+                        @include tablet-min{
+                            display: block;
+                            padding: 13px 0 15px;
+                            line-height: 20px;
+                        }
+                    }
+
+                    @include tablet-min{
+                        @include theme() {
+                            border-bottom: 1px solid theme-get('footer-border');
+                        }
+                    }
+                }
+
+                @include tablet-min{
+                    float: none;
+                    width: 100%;
+
+                    &.on{
+                        .ico-arrow{
+                            -webkit-transform: rotate(-180deg);
+                            transform: rotate(-180deg);
+                        }
+
+                        .list-service{
+                            display: block;
+                        }
+                    }
+
+                    &.wrap-news{
+                        .ico-arrow{
+                            -webkit-transform: rotate(-90deg);
+                            transform: rotate(-90deg);
+                        }
                     }
                 }
             }
@@ -58,7 +93,22 @@ footer{
                             @include theme() {
                                 stroke:  theme-get('footer-outline');
                             }
+
+                            @include tablet-min{
+                                width: 14px;
+                                height: 14px;
+                                float: right;
+                                margin-right: 12px;
+
+                                @include theme() {
+                                    stroke:  theme-get('footer-group-ico');
+                                }
+                            }
                         }
+                    }
+
+                    @include tablet-min{
+                        padding-top: 0;
                     }
                 }
             }
@@ -71,16 +121,61 @@ footer{
                         line-height: 20px;
                         letter-spacing: -.2px;
                         color: $color-888;
+
+                        @include tablet-min{
+                            display: block;
+                            padding: 6px 12px;
+                            line-height: 20px;
+                            letter-spacing: -.2px;
+
+                            @include theme(){
+                                color:theme-get('footer-li-a')
+                            }
+                        }
+                    }
+
+                    @include tablet-min{
+                        margin-top: 0;
+                    }
+                }
+                
+                @include tablet-min{
+                    display: none;
+                    padding: 18px 0;
+
+                    @include theme(){
+                        border-bottom: 1px solid theme-get('footer-ul-border');
                     }
                 }
             }
 
             .ico-arrow{
                 display: none;
+
+                @include tablet-min{
+                    float: right;
+                    display: block;
+                    width: 14px;
+                    height: 14px;
+                    margin: 4px 12px 0 0;
+                }
+                
+                .stroke{
+                    @include theme(){
+                        stroke: theme-get('footer-ico');
+                    }
+                }
             }
 
             .ico-outlink{
                 margin: 6px 0 0 4px;
+            }
+
+            @include tablet-min{
+                padding: 0;
+                @include theme(){
+                    border-top: 1px solid theme-get('footer-border');
+                }
             }
         }
 
@@ -152,10 +247,28 @@ footer{
                             margin-left: 0;
                         }
                     }
+
+                    @include tablet-min{
+                        width: 50%;
+                        margin-top: 15px;
+
+                        &+.wrap-info{
+                            margin-left: 0;
+                        }
+
+                        &:nth-child(n+6){
+                            margin-top: 15px;
+                        }
+                    }
                 }
 
                 @include tablet-max(){
                     width: 532px;
+                }
+
+                @include tablet-min{
+                    float: none;
+                    width: 100%;
                 }
             }
 
@@ -192,6 +305,10 @@ footer{
                         -webkit-transform: rotate(-45deg);
                         transform: rotate(-45deg);
                     }
+
+                    .list-subinfo{
+                        display: block;
+                    }
                 }
 
                 .list-subinfo{
@@ -201,6 +318,17 @@ footer{
 
                 @include tablet-max(){
                     width: 298px;
+                }
+
+                @include tablet-min{
+                    margin-top: 58px;
+                    width: 297px;
+                }
+
+                @include mobile-max{
+                    float: none;
+                    margin-top: 48px;
+                    width: 100%;
                 }
             }
 
@@ -231,12 +359,33 @@ footer{
                 li+li{
                     margin-top: 12px;
                 }
+
+                @include tablet-min{
+                    bottom: 25px;
+                }
+            }
+
+            @include tablet-min{
+                margin-top: 45px;
+            }
+
+            @include mobile-max{
+                margin-top: 48px;
             }
         }
 
         @include tablet-max(){
             max-width: 952px;
             padding-top: 36px;
+        }
+
+        @include tablet-min{
+            max-width: 630px;
+            padding-top: 0;
+        }
+
+        @include mobile-max{
+            max-width: 364px;
         }
     }
 
@@ -261,5 +410,24 @@ footer{
         @include tablet-max(){
             padding-top: 12px;
         }
+
+        @include tablet-min(){
+            float: left;
+            padding-top: 0;
+            margin-top: -30px;
+        }
+
+        @include mobile-max{
+            float: none;
+            margin-top: 48px;
+        }
+    }
+
+    @include tablet-min{
+        border: 0 !important;
+    }
+
+    @include mobile-min{
+        padding: 0 24px;
     }
 }

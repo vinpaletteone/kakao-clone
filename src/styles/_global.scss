@@ -58,6 +58,22 @@ body{
         color: theme-get('text-color');
         background-color: theme-get('item-title-bg');
     }
+
+    @include tablet-max{
+        margin-top: 72px;
+    }
+
+    @include tablet-min{
+        width: 220px;
+        height: 50px;
+        margin-top: 76px;
+        font-size: 16px;
+        line-height: 50px;
+    }
+
+    @include mobile-max{
+        margin-top: 60px;
+    }
 }
 
 .link-top{
@@ -79,6 +95,13 @@ body{
                 stroke: theme-get('bg-color');
             }
         }
+    }
+
+    @include tablet-min{
+        right: 50%;
+        width: 40px;
+        height: 40px;
+        margin-right: -20px;
     }
 }
 
@@ -167,6 +190,7 @@ body{
 }
 
 .header-feature{
+    display: none;
     position: fixed;
     top: 72px;
     width: 100%;
@@ -176,6 +200,10 @@ body{
     @include theme(){
         border-bottom: 1px solid theme-get('header-feature-border');
         background-color: theme-get('bg-color');
+    }
+
+    @include tablet-min(){
+        top: 60px;
     }
 }
 
@@ -192,6 +220,10 @@ body{
 
     @include tablet-max(){
         max-width: 952px;
+    }
+
+    @include tablet-min(){
+        max-width: 630px;
     }
 }
 
@@ -212,6 +244,10 @@ body{
         @include theme(){
             color: theme-get('text-color');
         }
+    }
+
+    @include tablet-min(){
+        padding: 10.5px 0;
     }
 }
 
@@ -262,7 +298,7 @@ body{
 
         a{
             display: block;
-            width: 74px;
+            width: 70px;
             height: 24px;
 
             .ico-logo{
@@ -275,6 +311,24 @@ body{
                 }
             }
         }
+
+        @include mobile-max{
+            padding-top: 18px;
+        }
+    }
+
+    @include tablet-min{
+        max-width: 630px;
+        height: 60px;
+    }
+    
+
+    @include mobile-max{
+        max-width: 364px;
+    }
+
+    @include mobile-min{
+        margin: 0 24px;
     }
 }
 
@@ -296,6 +350,27 @@ body{
             width: 28px;
             height: 28px;
         }
+
+        @include tablet-min{
+            top: -44px;
+            right: 18px;
+        }
+
+        @include mobile-max{
+            right: 0;
+        }
+    }
+
+    @include tablet-min{
+        max-width: 666px;
+    }
+
+    @include mobile-max{
+        max-width: 370px;
+    }
+
+    @include mobile-min{
+        margin: 0 24px;
     }
 }
 
@@ -343,6 +418,13 @@ body{
                 width: 24px;
                 height: 24px;
             }
+
+            @include mobile-min{
+                width: 18px;
+                height: 18px;
+                top: 13.5px;
+                left: 17px;
+            }
         }
 
         input{
@@ -372,10 +454,54 @@ body{
                 font-size: 18px;
                 letter-spacing: -.5px;
             }
+
+            @include tablet-min{
+                background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='450' height='60'%3E%3Cg transform='rotate(180 225 30)' fill='%23333' fill-rule='evenodd'%3E%3Cpath d='M0 0c3.336 2.42 5.514 6.34 5.513 10.776V20H20C20 8.954 11.046 0 0 0'/%3E%3Crect width='444' height='60' x='5.5' rx='23'/%3E%3C/g%3E%3C/svg%3E");
+            }
+
+            @include mobile-max{
+                height: 60px;
+                border-radius: 22px;
+                background-color: var(--colorFg1);
+                background-image: none;
+                @include theme(){
+                    background-color: theme-get('ico-share-path');
+                }
+            }
+
+            @include mobile-min{
+                height: 45px;
+                padding: 13px 16px 14px 44px;
+                font-size: 14px;
+            }
         }
 
         @include tablet-max(){
             width: 600px;
+        }
+
+        @include tablet-min{
+            width: 450px;
+        }
+
+        @include mobile-max{
+            position: relative;
+            width: 81.35%;
+            margin: 0;
+
+            &::after{
+                position: absolute;
+                bottom: 0;
+                right: -5px;
+                width: 20px;
+                height: 20px;
+                background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M20 20c-3.336-2.42-5.514-6.34-5.513-10.776V0H0c0 11.046 8.954 20 20 20' fill='%23333' fill-rule='evenodd'/%3E%3C/svg%3E");
+                content: "";
+            }
+        }
+
+        @include mobile-min{
+            width: 79.14%;
         }
     }
 
@@ -391,6 +517,27 @@ body{
         @include tablet-max(){
             max-width: 446px;
         }
+
+        @include mobile-min{
+            margin-top: 50px;
+        }
+    }
+
+    @include tablet-min{
+        padding: 84px 0;
+        background-position: top 78px right;
+        background-size: 96px 106px;
+    }
+
+    @include mobile-max{
+        padding: 72px 0;
+        background-position: top 65px right;
+        background-size: 63px 70px;
+    }
+
+    @include mobile-min{
+        background-size: 54px 60px;
+        background-position-y: 73px;
     }
 }
 
@@ -408,12 +555,29 @@ body{
                 @include tablet-max(){
                     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='60'%3E%3Cg transform='rotate(180 300 30)' fill='%23fff' fill-rule='evenodd'%3E%3Cpath d='M0 0c3.336 2.42 5.514 6.34 5.513 10.776V20H20C20 8.954 11.046 0 0 0'/%3E%3Crect width='594' height='60' x='5.5' rx='23'/%3E%3C/g%3E%3C/svg%3E");
                 }
+
+                @include tablet-min{
+                    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='450' height='60'%3E%3Cg transform='rotate(180 225 30)' fill='%23fff' fill-rule='evenodd'%3E%3Cpath d='M0 0c3.336 2.42 5.514 6.34 5.513 10.776V20H20C20 8.954 11.046 0 0 0'/%3E%3Crect width='444' height='60' x='5.5' rx='23'/%3E%3C/g%3E%3C/svg%3E");
+                }
+
+                @include mobile-max{
+                    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M20 20c-3.336-2.42-5.514-6.34-5.513-10.776V0H0c0 11.046 8.954 20 20 20' fill='%23fff' fill-rule='evenodd'/%3E%3C/svg%3E");
+                }
+            }
+
+            @include mobile-max{
+                &::after{
+                    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M20 20c-3.336-2.42-5.514-6.34-5.513-10.776V0H0c0 11.046 8.954 20 20 20' fill='%23fff' fill-rule='evenodd'/%3E%3C/svg%3E");
+                }
             }
         }
     }
 }
 
 .open-search{
+    overflow: hidden;
+    height: 100%;
+
     .search-layer{
         .inner-layer{
             opacity: 1;
@@ -427,6 +591,23 @@ body{
         -webkit-transform: translateY(0);
         transform: translateY(0);
         opacity: 1;
+    }
+    
+    main{
+        height: calc(100vh - 72px);
+        -webkit-transform: translateY(310px);
+        transform: translateY(310px);
+
+        @include tablet-min{
+            height: calc(100vh - 60px);
+            -webkit-transform: translateY(260px);
+            transform: translateY(260px);
+        }
+    
+        @include mobile-max{
+            -webkit-transform: translateY(220px);
+            transform: translateY(220px);
+        }
     }
 }
 
@@ -454,6 +635,14 @@ body{
             color: theme-get('text-color');
             background-color: theme-get('ico-share');
         }
+    }
+
+    @include tablet-min{
+        max-width: 352px;
+    }
+
+    @include mobile-max{
+        max-width: 334px;
     }
 }
 
