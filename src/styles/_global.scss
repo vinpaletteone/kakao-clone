@@ -686,6 +686,12 @@ body{
             color: theme-get('text-color');
             background-color: theme-get('ico-share');
         }
+
+        &:hover{
+            @include theme(){
+                background-color: theme-get('link-collection-hover');
+            }
+        }
     }
 
     @include tablet-min{
