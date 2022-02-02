@@ -23,7 +23,13 @@ $themes: (
     'footer-ico':#fff,
     'footer-ul-border':#333,
     'footer-li-a':#888,
-    'footer-group-ico':#fff
+    'footer-group-ico':#fff,
+    'link-collection': #333,
+    'link-collection-hover': #444,
+    'ico-top-hover':#dfdfdf,
+    'footer-li-a-hover':#f3f3f3,
+    'link-info-hover':f3f3f3
+
   ),
   light: (
     'text-color': #000,
@@ -49,7 +55,12 @@ $themes: (
     'footer-ico':#888,
     'footer-ul-border':#e6e6e6,
     'footer-li-a':#666,
-    'footer-group-ico':#888
+    'footer-group-ico':#888,
+    'link-collection': #eee,
+    'link-collection-hover': #dfdfdf,
+    'ico-top-hover':#444,
+    'footer-li-a-hover':#111,
+    'link-info-hover':#111
   )
 );
 

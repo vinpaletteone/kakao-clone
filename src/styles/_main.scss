@@ -674,7 +674,7 @@ main{
 }
 
 .main-culture{
-    height: 540px;
+    height: 594px;
     margin: 36px 0;
     padding: 54px 66px 0;
     border-radius: 14px;
@@ -878,5 +878,16 @@ main{
                 padding-bottom: 36px;
             }
         }
+    }
+}
+
+.item-card{
+    &:hover{
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        box-shadow: 4px 12px 20px 6px rgb(0 0 0 / 18%);
     }
 }

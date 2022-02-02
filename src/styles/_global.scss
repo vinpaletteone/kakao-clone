@@ -56,7 +56,7 @@ body{
     text-align: center;
     @include theme() {
         color: theme-get('text-color');
-        background-color: theme-get('item-title-bg');
+        background-color: theme-get('link-collection');
     }
 
     @include tablet-max{
@@ -73,6 +73,12 @@ body{
 
     @include mobile-max{
         margin-top: 60px;
+    }
+
+    &:hover{
+        @include theme() {
+            background-color: theme-get('link-collection-hover');
+        }
     }
 }
 
@@ -93,6 +99,14 @@ body{
         .stroke{
             @include theme(){
                 stroke: theme-get('bg-color');
+            }
+        }
+
+        &:hover{
+            circle{
+                @include theme(){
+                    fill: theme-get('ico-top-hover');
+                }
             }
         }
     }
@@ -179,12 +193,33 @@ body{
             fill: theme-get('ico-share-path');
         }
     }
+    
+    &:hover{
+        circle{
+            @include theme(){
+                fill: theme-get('ico-share-path');
+            }
+        }
+        .fill{
+            @include theme(){
+                fill: theme-get('ico-share');
+            }
+        }
+    }
 }
 
 .ico-share-link{
     .stroke{
         @include theme(){
             stroke: theme-get('ico-share-path');
+        }
+    }
+
+    &:hover{
+        .stroke{
+            @include theme(){
+                stroke: theme-get('ico-share');
+            }
         }
     }
 }
