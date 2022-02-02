@@ -3,6 +3,7 @@ import BodyClassName from 'react-body-classname'
 import '../../styles/_header.scss'
 import Logo from './Logo';
 import { useMediaQuery } from 'react-responsive';
+import HeaderMobileNav from './HeaderMobileNav';
 
 export default function Header({isDark, setDarkProps}) {
     const pc = useMediaQuery({
@@ -81,6 +82,9 @@ export default function Header({isDark, setDarkProps}) {
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" className="ico-search"><g fill="none" fillRule="evenodd"><g strokeWidth="1.6"><g transform="translate(-308 -16) translate(312 20)"><circle cx="8.944" cy="8.944" r="8.944"></circle> <path d="M14.987 14.987L21.017 21.017"></path></g></g></g></svg>
                             </button>
                         </>
+                    }
+                    {
+                        isTablet && <HeaderMobileNav />
                     }
                 </div>
             </header>

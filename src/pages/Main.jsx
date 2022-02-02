@@ -35,6 +35,21 @@ export default function Main() {
             "name" : '카카오 프라이버시',
             "image" : 'https://www.kakaocorp.com/page/ico_privacy.png',
             "description" : '카카오 프라이버시 아이콘'
+        },
+        'kakao' : {
+            "name" : '카카오',
+            "image" : 'https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65779d87017800001.png',
+            "description" : '카카오 라이언 아이콘'
+        },
+        'news' : {
+            "name" : '뉴스',
+            "image" : 'https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/657726a1017800001.png',
+            "description" : '뉴스 아이콘'
+        },
+        'service' : {
+            "name" : '기술과 서비스',
+            "image" : 'https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6575c56d017800001.png',
+            "description" : '기술과 서비스 아이콘'
         }
     }
 
@@ -63,7 +78,7 @@ export default function Main() {
                 <ClickBtn />
                 <LinkTop />
             </main>
-            <SearchLayer />
+            {/* <SearchLayer /> */}
             <Footer />
         </>
     )

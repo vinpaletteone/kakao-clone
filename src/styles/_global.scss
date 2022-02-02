@@ -189,8 +189,16 @@ body{
     }
 }
 
+.head-bottom+.header-feature{
+    top: 60px;
+}
+
+.head-hide+.header-feature{
+    top: -1px;
+}
+
 .header-feature{
-    display: none;
+    // display: none;
     position: fixed;
     top: 72px;
     width: 100%;
@@ -224,6 +232,14 @@ body{
 
     @include tablet-min(){
         max-width: 630px;
+    }
+
+    @include mobile-max{
+        max-width: 364px;
+    }
+
+    @include mobile-min{
+        margin: 0 24px;
     }
 }
 
