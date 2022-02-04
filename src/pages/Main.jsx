@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import LinkTop from '../components/Layout/LinkTop';
 import { Header, Footer, Title, ItemCard, ClickBtn, Culture, ItemCard2, Etc, HeaderFeature, SearchLayer} from '../js/component';
 import '../styles/_main.scss'
+import '../js/event'
 
 export default function Main() {
     const headerTitle = '오늘의 카카오';

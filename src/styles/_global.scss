@@ -241,7 +241,6 @@ body{
     -webkit-transition: top .2s ease-in-out;
     transition: top .2s ease-in-out;
     @include theme(){
-        border-bottom: 1px solid theme-get('header-feature-border');
         background-color: theme-get('bg-color');
     }
 

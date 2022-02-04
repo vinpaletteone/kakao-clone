@@ -20,7 +20,7 @@ export default function Header({isDark, setDarkProps}) {
 
     return (
         <BodyClassName className={isDark ? 'dark' : 'light'}>
-            <header className={isTablet && 'type2'}>
+            <header className={`header ${isTablet ? 'type2' : ''}`}>
                 <div className="wrap-header clear">
                     <h1 className="doc-title float-left">
                         <a href="/">

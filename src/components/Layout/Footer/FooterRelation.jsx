@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function FooteRelation({item}) {
-    console.log('item', item);
+    // console.log('item', item);
     return (
         <div className="wrap-info">
             <a href={item.link ? item.link : ''} className={`link-info ${item.name==='위치기반서비스 이용약관' || item.name==='개인정보처리방침' ? 'link-emph' : ''}`}>

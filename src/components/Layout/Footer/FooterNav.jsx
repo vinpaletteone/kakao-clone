@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function FooterNav({item}) {
     const flag = item.name==='인재 영입' || item.name==='카카오 계정';
-    console.log(flag);
+    // console.log(flag);
     return (
         <div className={`wrap-service ${item.name==='뉴스' ? 'wrap-news' : ''} ${flag ? 'group-service' : ''}`}>
             <strong className="tit-service">

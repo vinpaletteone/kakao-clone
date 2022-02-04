@@ -6,12 +6,17 @@ header{
         color: theme-get('text-color');
         background-color: theme-get('bg-color');
     }
+
+    &.active{
+        @include theme(){
+            border-bottom: 1px solid theme-get('header-feature-border');
+        }
+    }
     
     .wrap-header{
         max-width: 1296px;
         margin: 0 auto;
         height: 72px;
-        border-bottom: 1px solid black;
 
         @include tablet-max{
             max-width: 952px;
