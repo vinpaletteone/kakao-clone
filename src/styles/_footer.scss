@@ -152,6 +152,11 @@ footer{
                             @include theme(){
                                 color:theme-get('footer-li-a-hover')
                             }
+                            .ico-outlink{
+                                @include theme(){
+                                    stroke:theme-get('footer-li-a-hover')
+                                }
+                            }
                         }   
                     }
 
@@ -388,6 +393,11 @@ footer{
                     &:hover{
                         @include theme(){
                             color: theme-get('link-info-hover');
+                        }
+                        .ico-outlink{
+                            @include theme(){
+                                stroke:theme-get('footer-li-a-hover')
+                            }
                         }
                     }
                 }
