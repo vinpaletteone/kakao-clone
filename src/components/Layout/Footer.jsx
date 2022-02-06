@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import dummy from '../../db/footer.json'
 import '../../styles/_footer.scss'
 import FooteRelation from './Footer/FooterRelation';
 import FooterNav from './Footer/FooterNav';
 
 export default function Footer() {
+    const [infoOpen, setInfoOpen] = useState(false);
+    const handleSubInfo = (e) => {
+        e.preventDefault();
+        infoOpen ? setInfoOpen(false) : setInfoOpen(true)
+    }
+
     return (
         <footer>
             <div className="inner-footer">
@@ -21,11 +27,11 @@ export default function Footer() {
                             dummy.FooterRelation.map((item, index)=> <FooteRelation key={index} item={item}/>)
                         }
                     </div>
-                    <div className="wrap-relation">
+                    <div className={`wrap-relation ${infoOpen ? 'info-open' : ''}`}>
                         <strong className="tit-relation">
-                            <a href="" role="button" className='clear'>
+                            <a href="#javascript" role="button" className='clear' onClick={handleSubInfo}>
                                 관련사이트
-                                <svg data-v-75150fa2=""  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" className="ico-plus"><path data-v-75150fa2="" d="M6.222 0H7.7780000000000005V14H6.222z" transform="translate(-1414 -643) translate(80 245) translate(1334 398)"></path> <path data-v-75150fa2="" d="M6.222 0H7.7780000000000005V14H6.222z" transform="translate(-1414 -643) translate(80 245) translate(1334 398) rotate(90 7 7)"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" className="ico-plus"><path  d="M6.222 0H7.7780000000000005V14H6.222z" transform="translate(-1414 -643) translate(80 245) translate(1334 398)"></path> <path  d="M6.222 0H7.7780000000000005V14H6.222z" transform="translate(-1414 -643) translate(80 245) translate(1334 398) rotate(90 7 7)"></path></svg>
                             </a>
                         </strong>
                         <ul className='list-subinfo'>

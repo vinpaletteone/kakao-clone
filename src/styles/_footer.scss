@@ -349,6 +349,17 @@ footer{
                     margin-top: 48px;
                     width: 100%;
                 }
+                
+                &.info-open{
+                    .ico-plus{
+                        -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                    }
+    
+                    .list-subinfo{
+                        display: block;
+                    }
+                }
             }
 
             .list-subinfo{
@@ -396,17 +407,6 @@ footer{
 
             @include mobile-max{
                 margin-top: 48px;
-            }
-
-            &.info-open{
-                .ico-plus{
-                    -webkit-transform: rotate(-45deg);
-                    transform: rotate(-45deg);
-                }
-
-                .list-subinfo{
-                    display: block;
-                }
             }
         }
 
