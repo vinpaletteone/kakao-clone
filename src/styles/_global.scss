@@ -233,7 +233,6 @@ body{
 }
 
 .header-feature{
-    // display: none;
     position: fixed;
     top: 72px;
     width: 100%;
@@ -242,10 +241,15 @@ body{
     transition: top .2s ease-in-out;
     @include theme(){
         background-color: theme-get('bg-color');
+        border-bottom: 1px solid theme-get('header-feature-border');
     }
 
     @include tablet-min(){
         top: 60px;
+    }
+
+    &.active{
+        top: -1px;
     }
 }
 

@@ -6,11 +6,17 @@ header{
         color: theme-get('text-color');
         background-color: theme-get('bg-color');
     }
+    -webkit-transition: top .2s ease-in-out;
+    transition: top .2s ease-in-out;
 
     &.active{
         @include theme(){
             border-bottom: 1px solid theme-get('header-feature-border');
         }
+    }
+
+    &.hide{
+        top: -73px;
     }
     
     .wrap-header{
