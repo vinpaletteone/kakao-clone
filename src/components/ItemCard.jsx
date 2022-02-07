@@ -13,7 +13,7 @@ export default function ItemCard({icon}) {
                     </div>
                 </div>
                 <div className="wrap-item">
-                    <div className="inner-item">
+                    <div className="inner-item layout">
                         {
                             beforeList.map((item, index) => {
                               return index!==0 && <Item key={index} item={item} />

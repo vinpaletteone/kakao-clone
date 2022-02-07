@@ -13,7 +13,7 @@ export default function ItemCard2({icon}) {
                     </div>
                 </div>
                 <div className="wrap-item">
-                    <div className="inner-item">
+                    <div className="inner-item layout">
                         <div className="item-card  item-customer card-half">
                             <div className="wrap-cont">
                                 <div role="text">

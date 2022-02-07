@@ -1,20 +1,19 @@
 import React, { useState } from 'react'
 import LinkTop from '../components/Layout/LinkTop';
-import { Header, Footer, Title, ItemCard, ClickBtn, Culture, ItemCard2, Etc, HeaderFeature, SearchLayer} from '../js/component';
-import '../styles/_main.scss'
-import '../js/event'
+import { Header, Footer, Title, ItemCard, ClickBtn, Culture, ItemCard2, Etc, HeaderFeature } from '../js/component';
+import { useMediaQuery } from 'react-responsive';
+import BodyClassName from 'react-body-classname'
+import '../styles/_main.scss';
+import '../js/event';
 
 export default function Main() {
     const headerTitle = '오늘의 카카오';
     const [isDark, setDark] = useState(false);
-
-    const onChange = ({ target }) => {
-      target.checked ? setDark(true) : setDark(false);
-    }; 
+    const isPc = useMediaQuery({
+        query : "(min-width:1440px)"
+    });
   
-    const setDarkProps = (e) => {
-      setDark(e)
-    }
+    const setDarkProps = (e) => setDark(e)
 
     const icon = {
         "promise" : {
@@ -67,20 +66,21 @@ export default function Main() {
     }
 
     return (
-        <>
-            <Header isDark={isDark} setDarkProps={e => setDarkProps(e)} icon={icon} />
-            <HeaderFeature imageUrl={imageUrl} day={week[day]} headerTitle={headerTitle}/>
-            <main>
-                <Title date={date} month={month} day={week[day]} dateImage={dateImage} headerTitle={headerTitle}/>
-                <ItemCard icon={icon} />
-                <Culture />
-                <ItemCard2 icon={icon} />
-                <Etc />
-                <ClickBtn />
-                <LinkTop />
-            </main>
-            {/* <SearchLayer /> */}
-            <Footer />
-        </>
+        <BodyClassName className={isPc ? 'pc' : ''}>
+            <>
+                <Header isDark={isDark} setDarkProps={e => setDarkProps(e)} icon={icon} />
+                <HeaderFeature imageUrl={imageUrl} day={week[day]} headerTitle={headerTitle}/>
+                <main>
+                    <Title date={date} month={month} day={week[day]} dateImage={dateImage} headerTitle={headerTitle}/>
+                    <ItemCard icon={icon} />
+                    <Culture />
+                    <ItemCard2 icon={icon} />
+                    <Etc />
+                    <ClickBtn />
+                    <LinkTop />
+                </main>
+                <Footer />
+            </>
+        </BodyClassName>
     )
 }

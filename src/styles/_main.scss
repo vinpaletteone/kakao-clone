@@ -891,3 +891,18 @@ main{
         box-shadow: 4px 12px 20px 6px rgb(0 0 0 / 18%);
     }
 }
+
+body.pc{
+    .inner-item.layout{
+        position: relative;
+        height: 648px;
+        
+        .item-card{
+            &:nth-child(2){
+                position: absolute;
+                left: 333px;
+                top: 0px;
+            }
+        }
+    }
+}
