@@ -6,7 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 import HeaderMobileNav from './HeaderMobileNav';
 import SearchLayer from './SearchLayer';
 
-export default function Header({isDark, setDarkProps}) {
+export default function Header({isDark, setDarkProps, icon}) {
     const [showSearchModal, setShowSearchModal] = useState(false);
     const pc = useMediaQuery({
         query : "(min-width:1024px)"
@@ -21,6 +21,7 @@ export default function Header({isDark, setDarkProps}) {
 
 
     const handleSearch = () => {
+        window.scrollTo(0, 0);
         setShowSearchModal(true);
     }
 
@@ -90,7 +91,7 @@ export default function Header({isDark, setDarkProps}) {
                         </>
                     }
                     {
-                        isTablet && <HeaderMobileNav />
+                        isTablet && <HeaderMobileNav icon={icon}/>
                     }
                 </div>
                 { showSearchModal ? <SearchLayer setShowSearchModal={setShowSearchModal}/> : null}
