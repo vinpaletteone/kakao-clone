@@ -23,6 +23,9 @@ export default function Header({isDark, setDarkProps, icon}) {
     const handleSearch = () => {
         window.scrollTo(0, 0);
         setShowSearchModal(true);
+        setTimeout(() => {
+            document.querySelector('.area-search').classList.add('active');
+        }, 0);
     }
 
     return (
