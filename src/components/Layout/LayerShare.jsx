@@ -1,6 +1,12 @@
 import React from 'react'
 
-export default function LayerShare() {
+export default function LayerShare({showLayer, setShowLayer}) {
+    const clickClose = () => {
+        document.querySelector('.layer-share').classList.remove('active');
+        setTimeout(() => {
+            setShowLayer(false);
+        }, 300);
+    }
     const item = [
         {
             "name" : 'kakao',
@@ -25,7 +31,7 @@ export default function LayerShare() {
         }
     ]
     return (
-        <div className='layer-share'>
+        <div className={`layer-share `}>
             <strong className="screen-out">공유하기 레이어</strong>
             <ul className='list-layer'>
                 {
@@ -60,7 +66,7 @@ export default function LayerShare() {
                     })
                 }
             </ul>
-            <button className="btn-close">
+            <button className="btn-close" onClick={clickClose}>
                 <svg data-v-7171d635="" data-v-2bb26b20="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" className="ico-close"><g data-v-7171d635="" fill="none" fillRule="evenodd" strokeLinecap="square"><g data-v-7171d635="" strokeWidth="1.6"><path data-v-7171d635="" d="M0 0.5L16.5 17.5" transform="translate(-547 -167) translate(187 145) translate(360 22) translate(6 5)"></path> <path data-v-7171d635="" d="M0 0.5L16.5 17.5" transform="translate(-547 -167) translate(187 145) translate(360 22) translate(6 5) matrix(-1 0 0 1 17 0)"></path></g></g></svg>
             </button>
         </div>

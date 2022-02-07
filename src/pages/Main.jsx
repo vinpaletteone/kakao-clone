@@ -68,7 +68,7 @@ export default function Main() {
 
     return (
         <>
-            <Header isDark={isDark} setDarkProps={e => setDarkProps(e)} />
+            <Header isDark={isDark} setDarkProps={e => setDarkProps(e)} icon={icon} />
             <HeaderFeature imageUrl={imageUrl} day={week[day]} headerTitle={headerTitle}/>
             <main>
                 <Title date={date} month={month} day={week[day]} dateImage={dateImage} headerTitle={headerTitle}/>

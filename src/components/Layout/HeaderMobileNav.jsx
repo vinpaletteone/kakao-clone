@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from './Logo'
 
-export default function HeaderMobileNav() {
+export default function HeaderMobileNav({icon}) {
     return (
         <div className='area-gnb'>
             <div className="inner-gnb">
@@ -15,8 +15,8 @@ export default function HeaderMobileNav() {
                     <h2 className="screen-out">메인메뉴</h2>
                     <ul className='list_gnb'>
                         <li>
-                            <a href="" role="button">
-                                <img src="" alt="" className="ico-menu" />
+                            <a href="#javascript" role="button">
+                                <img src={icon.kakao.image} alt="" className="ico-menu" />
                                 <span>카카오</span>
                             </a>
                             <ul className="list-sub">

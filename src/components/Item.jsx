@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LayerShare from './Layout/LayerShare'
 
 export default function Item({item, itemNew}) {
     // console.log(item);
+    const [showLayer, setShowLayer] = useState(false);
+    const handleLayer = () => {
+        setShowLayer(true);
+        setTimeout(() => {
+            document.querySelector('.layer-share').classList.add('active');
+        }, 0);
+    }
     return (
         <div className="item-card">
             <span className="wrap-cont">
@@ -23,10 +30,10 @@ export default function Item({item, itemNew}) {
                     )}
                 </span>
             </span>
-            <button className="btn-share">
+            <button className="btn-share" onClick={handleLayer}>
                 <svg data-v-f9455140="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="ico-share"><g data-v-f9455140="" fill="none" fillRule="evenodd"><path data-v-f9455140="" d="M0 0H24V24H0z" transform="translate(-350 -222) translate(24 192) translate(326 30)"></path> <g data-v-f9455140="" transform="translate(-350 -222) translate(24 192) translate(326 30) translate(10 2)" className="fill"><circle data-v-f9455140="" cx="2" cy="2" r="2"></circle> <circle data-v-f9455140="" cx="2" cy="10" r="2"></circle> <circle data-v-f9455140="" cx="2" cy="18" r="2"></circle></g></g></svg>
             </button>
-            <LayerShare />
+            { showLayer && <LayerShare showLayer={showLayer} setShowLayer={setShowLayer}/> }
     </div>
     )
 }
