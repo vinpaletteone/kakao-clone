@@ -1,39 +1,78 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from './Logo'
+import dummy from '../../db/footer.json'
+import Item from '../Item';
 
 export default function HeaderMobileNav({icon}) {
+    const list = dummy.footerList;
+    const [showSub, setShowSub] = useState(false);
+    const handleListSub = (e) => {
+        showSub ? setShowSub(false) : setShowSub(true);
+        console.log(e)
+        console.log(e.target)
+        // e.target.
+        
+    }
+    const handleListSubClose = () => setShowSub(false);
+    const handleTarget = (e) => e.preventDefault();
+    
     return (
         <div className='area-gnb'>
             <div className="inner-gnb">
                 <strong className="gnb-logo">
-                    <a href="">
+                    <a href="/">
                         <span className='screen-out'>Kakao</span>
                         <Logo />
                     </a>
                 </strong>
                 <nav className="doc-gnb" id='gnbContent'>
                     <h2 className="screen-out">메인메뉴</h2>
-                    <ul className='list_gnb'>
-                        <li>
-                            <a href="#javascript" role="button">
-                                <img src={icon.kakao.image} alt="" className="ico-menu" />
-                                <span>카카오</span>
-                            </a>
-                            <ul className="list-sub">
-                                <li role="listitem">
-                                    <a href="">카카오문화</a>
-                                </li>
-                            </ul>
-                        </li>
+                    <ul className='list-gnb'>
+                        {
+                            list && list.map((i, index)=>{
+                                if(index<4){
+                                    return (
+                                        <li key={index} onClick={handleListSub} className={`${showSub ? 'on' : ''}`}>
+                                            <a href={i.list ? '#javascript' : i.link} role="button" className={i.list ? 'link' : ''} onClick={handleTarget}> 
+                                                <img src={icon.kakao.image} alt="" className="ico-menu" />
+                                                <span>{i.name}</span>
+                                            </a>
+                                            {
+                                                i.list && 
+                                                <ul className='list-sub'>
+                                                    {
+                                                        i.list && i.list.map((item, idx)=>{
+                                                            return(
+                                                                <li role="listitem" key={idx}>
+                                                                    <a href={item.link}>{item.name}</a>
+                                                                </li>
+                                                            )
+                                                        })
+                                                    }
+                                                </ul>
+                                            }
+                                        </li>
+                                    )
+                                }
+                            })
+                        }
                     </ul>
                 </nav>
-                <div className="group-relation">
+                <div className="group-relation clear">
                     <ul className="list-relation">
-                        <li>
-                            <a href="" target='_blank'>
-                                투자정보
-                            </a>
-                        </li>
+                        {
+                            list && list.map((i, index)=>{
+                                if(index>3 && index<7){
+                                    return(
+                                        <li key={index}>
+                                            <a href={i.list ? '#javascript' : i.link} target='_blank'>
+                                                {i.name}
+                                            </a>
+                                        </li>
+                                    )
+                                }
+                            })
+                        }
                     </ul>
                     <div className="wrap-util">
                         <button type='button' className='btn-mode'>
@@ -50,7 +89,7 @@ export default function HeaderMobileNav({icon}) {
                         </button>
                     </div>
                 </div>
-                <button type='button' className='btn-close'>
+                <button type='button' className='btn-close' onClick={handleListSubClose}>
                     <span className='screen-out'>메인 메뉴 닫기</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" className="ico-close"><g fill="none" fillRule="evenodd" strokeLinecap="square"><g strokeWidth="1.6"><path d="M0 0.5L16.5 17.5" transform="translate(-547 -167) translate(187 145) translate(360 22) translate(6 5)"></path> <path d="M0 0.5L16.5 17.5" transform="translate(-547 -167) translate(187 145) translate(360 22) translate(6 5) matrix(-1 0 0 1 17 0)"></path></g></g></svg>
                 </button>

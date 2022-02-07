@@ -46,7 +46,7 @@ header{
     .doc-gnb{
         text-align: center;
 
-        .list_gnb{
+        .list-gnb{
             display: inline-block;
             margin-left: -74px;
             @include font-style(16, '', '', bold, -.5px);
@@ -182,7 +182,7 @@ header{
                 display: flex;
                 position: relative;
                 min-height: 100%;
-                max-width: 364px;
+                max-width: 412px;
                 padding-bottom: 36px;
                 box-sizing: border-box;
                 -webkit-box-orient: vertical;
@@ -203,6 +203,154 @@ header{
                     .ico-logo{
                         width: 100%;
                     }
+                }
+            }
+
+            .btn-close{
+                position: absolute;
+                top: 16px;
+                right: 0;
+            }
+        }
+
+        .doc-gnb{
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            padding: 47px 0 66px;
+            box-sizing: border-box;
+
+            .list-gnb{
+                margin-left: 0;
+                display: block;
+
+                & > li{
+                    text-align: left;
+                    display: block;
+
+                    a{
+                        padding: 0;
+                        line-height: 1;
+                        font-weight: normal;
+
+                        .ico-menu{
+                            width: 48px;
+                            height: 48px;
+                            margin-top: 2px;
+                            vertical-align: top;
+                        }
+
+                        span{
+                            display: inline-block;
+                            margin-left: 16px;
+                            line-height: 52px;
+                            font-size: 36px;
+                            font-weight: 700;
+                            letter-spacing: -.8px;
+                            @include theme(){
+                                color: theme-get('footer-span-color');
+                            }
+                        }
+
+                        &.link::after{
+                            display: inline-block;
+                            margin: 24px 0 0 14px;
+                            border: 5px solid transparent;
+                            vertical-align: top;
+                            content: "";
+                            @include theme(){
+                                border-top: 5px solid theme-get('footer-span-color');
+                            }
+                        }
+                    }
+
+                    &+li{
+                        margin-top: 36px;
+                    }
+
+                    &.on{
+                        .link::after{
+                            -webkit-transform: rotate(-180deg);
+                            transform: rotate(-180deg);
+                            margin-top: 18px;
+                        }
+
+                        .list-sub{
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .list-sub{
+                margin: 21px 0 36px 68px;
+                display: none;
+                
+                & > li{
+                    display: block;
+                    a{
+                        display: inline-block;
+                        padding: 13px 20px 15px;
+                        border-radius: 30px;
+                        line-height: 27px;
+                        font-size: 18px;
+                        font-weight: 700;
+                        letter-spacing: -.16px;
+                        @include theme(){
+                            color: theme-get('footer-stroke');
+                            background-color: theme-get('item-title-bg');
+                        }
+                    }
+
+                    &+li{
+                        margin-top: 14px;
+                    }
+
+                }
+            }
+        }
+
+        .group-relation{
+            height: 28px;
+            
+            .list-relation{
+                float: left;
+
+                li{
+                    display: inline-block;
+                    position: relative;
+                    
+                    a{
+                        display: inline-block;
+                        font-weight: 700;
+                        line-height: 28px;
+                        letter-spacing: -.2px;
+
+                        @include theme(){
+                            color: theme-get('footer-outline');
+                        }
+                    }
+
+                    &+li{
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            .wrap-util{
+                float: right;
+
+                .ico-mode-dark, .ico-language{
+                    width: 28px;
+                    height: 28px;
+
+                    @include theme(){
+                        stroke: theme-get('text-color');
+                    }
+                }
+
+                button+button{
+                    margin-left: 20px;
                 }
             }
         }

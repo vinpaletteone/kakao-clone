@@ -43,7 +43,7 @@ export default function Header({isDark, setDarkProps, icon}) {
                         <>
                             <nav id="gnbContent" className="doc-gnb">
                                 <h2 className="screen-out">메인메뉴</h2>
-                                <ul className="list_gnb">
+                                <ul className="list-gnb">
                                     <li>
                                         <a href="/">카카오</a>
                                     </li>
