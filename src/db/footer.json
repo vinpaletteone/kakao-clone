@@ -5,110 +5,110 @@
             "list" : [
                 {
                     "name" : "카카오 문화",
-                    "link" : "kakao"
+                    "link" : "https://www.kakaocorp.com/page/kakao/kakaoCulture"
                 },
                 {
                     "name" : "공동체",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/kakao/subsidiaryCompany"
                 },
                 {
                     "name" : "히스토리",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/kakao/history"
                 }
             ],
-            "link" : ""
+            "link" : "https://www.kakaocorp.com/page/kakao/kakaoCulture"
         },
         { 
             "name" : "뉴스",
-            "link" : ""
+            "link" : "https://www.kakaocorp.com/page/news"
         },
         {
             "name" : "기술과 서비스",
             "list" : [
                 {
                     "name" : "기술",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/service/tech"
                 },
                 {
                     "name" : "서비스",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/service/service"
                 }
             ],
-            "link" : ""
+            "link" : "https://www.kakaocorp.com/page/service/tech"
         },
         {
             "name" : "약속과 책임",
             "list" : [
                 {
                     "name" : "ESG",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/responsible/esg"
                 },
                 {
                     "name" : "소셜임팩트",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/responsible/social"
                 },
                 {
                     "name" : "디지털 권리",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/responsible/digital"
                 },
                 {
                     "name" : "AI 윤리",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/responsible/aiEthics"
                 }
             ],
-            "link" : ""
+            "link" : "https://www.kakaocorp.com/page/responsible/social"
         },
         {
             "name" : "투자정보",
             "list" : [
                 {
                     "name" : "기업지배구조",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/ir/managementInformation/shareholderComposition"
                 },
                 {
                     "name" : "주가정보",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/ir/stockInformation"
                 },
                 {
                     "name" : "재무정보",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/ir/financialInformation/consolidatedFinancialStatements"
                 },
                 {
                     "name" : "IR행사",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/ir/referenceRoom/earningsAnnouncement"
                 },
                 {
                     "name" : "공시정보",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/ir/disclosureInformation"
                 },
                 {
                     "name" : "공고",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/ir/noticeList"
                 }
             ],
-            "link" : ""
+            "link" : "https://www.kakaocorp.com/ir/main"
         },
         {
             "name" : "고객센터",
             "list" : [
                 {
                     "name" : "카카오 고객센터",
-                    "link" : ""
+                    "link" : "https://cs.kakao.com/"
                 },
                 {
                     "name" : "Daum 고객센터",
-                    "link" : ""
+                    "link" : "https://cs.daum.net/"
                 }
             ],
-            "link" : ""
+            "link" : "https://cs.kakao.com/"
         },
         {
             "name" : "인재영입",
-            "link" : ""
+            "link" : "https://careers.kakao.com/index"
         },
         {
             "name" : "카카오 계정",
-            "link" : ""
+            "link" : "https://accounts.kakao.com/weblogin/account/info"
         }
     ],
     "FooterRelation" : [
@@ -117,15 +117,15 @@
             "list" : [
                 {
                     "name" : "카카오계정 서비스",
-                    "link" : ""
+                    "link" : "https://www.kakao.com/policy/terms?type=a&amp;lang=ko"
                 },
                 {
                     "name" : "카카오 서비스",
-                    "link" : ""
+                    "link" : "https://www.kakao.com/policy/terms?type=ts&amp;lang=ko"
                 },
                 {
                     "name" : "Daum 서비스",
-                    "link" : ""
+                    "link" : "http://policy.daum.net/info/info"
                 }
             ]
         },
@@ -134,11 +134,11 @@
             "list" : [
                 {
                     "name" : "카카오 서비스",
-                    "link" : ""
+                    "link" : "https://www.kakao.com/policy/location?lang=ko"
                 },
                 {
                     "name" : "Daum 서비스",
-                    "link" : ""
+                    "link" : "http://policy.daum.net/mobile_info/mobile_info"
                 }
             ]
         },
@@ -147,89 +147,89 @@
             "list" : [
                 {
                     "name" : "기업사이트",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/policy/privacyPolicy/corporateSitePrivacyPolicy"
                 },
                 {
                     "name" : "카카오 서비스",
-                    "link" : ""
+                    "link" : "https://www.kakao.com/policy/privacy?lang=ko"
                 },
                 {
                     "name" : "Daum 서비스",
-                    "link" : ""
+                    "link" : "http://policy.daum.net/info_protection/info_protection"
                 }
             ]
         },
         {
             "name" : "운영정책",
-            "link" : "aa"
+            "link" : "https://www.kakao.com/policy/oppolicy?lang=ko"
         },
         {
             "name" : "청소년보호정책",
             "list" : [
                 {
                     "name" : "카카오 서비스",
-                    "link" : ""
+                    "link" : "https://www.kakao.com/policy/safeguard?lang=ko"
                 },
                 {
                     "name" : "Daum 서비스",
-                    "link" : ""
+                    "link" : "http://policy.daum.net/youthpolicy/youthpolicy"
                 }
             ]
         },
         {
             "name" : "권해침해신고안내",
-            "link" : "a"
+            "link" : "https://www.kakao.com/policy/right?lang=ko"
         },
         {
             "name" : "공지사항",
             "list" : [
                 {
                     "name" : "기업사이트",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/policy/notice/kakaocorp/list"
                 },
                 {
                     "name" : "카카오 서비스",
-                    "link" : ""
+                    "link" : "https://www.kakao.com/notices?lang=ko"
                 },
                 {
                     "name" : "Daum 서비스",
-                    "link" : ""
+                    "link" : "https://m.daum.net/channel/new/notice"
                 }
             ]
         },
         {
             "name" : "사이버윤리실",
-            "link" : ""
+            "link" : "https://www.kakaocorp.com/policy/cyberEthics/info"
         },
         {
             "name" : "Contact Us",
-            "link" : ""
+            "link" : "https://www.kakaocorp.com/ir/wayToCome"
         }
     ],
     "RelationSite" : [
         {
             "name" : "카카오 AI",
-            "link" : ""
+            "link" : "https://kakao.ai/"
         },
         {
             "name" : "카카오 프라이버시",
-            "link" : ""
+            "link" : "https://privacy.kakao.com/main?lang=ko"
         },
         {
             "name" : "카카오 디벨로퍼스",
-            "link" : ""
+            "link" : "https://developers.kakao.com/"
         },
         {
             "name" : "다음 포털 사이트",
-            "link" : ""
+            "link" : "https://www.daum.net/"
         },
         {
             "name" : "동반 성장 사이트",
-            "link" : ""
+            "link" : "https://winwin.kakao.com/index"
         },
         {
             "name" : "제주 with kakao",
-            "link" : ""
+            "link" : "https://jeju.kakao.com/"
         }
     ]
 }
