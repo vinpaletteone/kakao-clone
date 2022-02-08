@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Logo from './Logo'
 import BodyClassName from 'react-body-classname'
 
-export default function SearchLayer({setShowSearchModal}) {
+export default function SearchLayer({showSearchModal,setShowSearchModal}) {
     const handleClick = () =>{
-        setShowSearchModal(false);
+        document.querySelector('body').classList.remove('open-search')
+        setTimeout(()=>{
+            if(!(document.querySelector('body').classList.contains('open-search'))){
+                setShowSearchModal(false);
+            }
+        },300)
     }
+
+    useEffect(() => {
+        showSearchModal && document.querySelector('body').classList.add('open-search')
+    }, []);
 
     return (
         <BodyClassName>

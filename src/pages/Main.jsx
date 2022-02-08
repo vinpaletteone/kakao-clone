@@ -12,6 +12,9 @@ export default function Main() {
     const isPc = useMediaQuery({
         query : "(min-width:1440px)"
     });
+    const isTabletMin = useMediaQuery({
+        query : "(min-width:768px) and (max-width:1023px)"
+    });
   
     const setDarkProps = (e) => setDark(e)
 
@@ -66,7 +69,7 @@ export default function Main() {
     }
 
     return (
-        <BodyClassName className={isPc ? 'pc' : ''}>
+        <BodyClassName className={`${isPc ? 'pc' : ''} ${isTabletMin ? 'tabletMin' : ''}`}>
             <>
                 <Header isDark={isDark} setDarkProps={e => setDarkProps(e)} icon={icon} />
                 <HeaderFeature imageUrl={imageUrl} day={week[day]} headerTitle={headerTitle}/>

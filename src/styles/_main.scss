@@ -76,7 +76,7 @@ main{
                 background-size: 56px 56px;
             }
 
-            @include tablet-max{
+            @include tablet-min{
                 padding-top: 48px;
                 font-size: 30px;
                 line-height: 40px;
@@ -902,6 +902,53 @@ body.pc{
                 position: absolute;
                 left: 333px;
                 top: 0px;
+            }
+        }
+    }
+}
+
+body.tabletMin{
+    .inner-item.layout{
+        position: relative;
+        
+        .item-card{
+            &:nth-child(2){
+                position: absolute;
+                left: 333px;
+                top: 0px;
+                margin-top: 0;
+
+                .wrap-thumb{
+                    height: 248px;
+
+                    .thumb-img{
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-itemCard:not(.itemCard2){
+        .inner-item.layout{
+            height: 446px;
+
+            .item-card{
+                &:first-child{
+                    .wrap-thumb{
+                        height: 248px;
+    
+                        .thumb-img{
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                &:last-child{
+                    position: absolute;
+                    right: 0;
+                    top: 205px;
+                }
             }
         }
     }

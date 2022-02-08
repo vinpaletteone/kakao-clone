@@ -1,0 +1,91 @@
+{
+    "nav" : [
+        {
+            "name" : "카카오",
+            "list" : [
+                {
+                    "name" : "카카오 문화",
+                    "link" : "kakao"
+                },
+                {
+                    "name" : "공동체",
+                    "link" : ""
+                },
+                {
+                    "name" : "히스토리",
+                    "link" : ""
+                }
+            ],
+            "image" : "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65779d87017800001.png",
+            "description" : "카카오 라이언 아이콘"
+        },
+        { 
+            "name" : "뉴스",
+            "link" : "",
+            "image" : "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/657726a1017800001.png",
+            "description" : "뉴스 아이콘"
+        },
+        {
+            "name" : "기술과 서비스",
+            "list" : [
+                {
+                    "name" : "기술",
+                    "link" : ""
+                },
+                {
+                    "name" : "서비스",
+                    "link" : ""
+                }
+            ],
+            "image" : "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6575c56d017800001.png",
+            "description" : "기술과 서비스 아이콘"
+            
+        },
+        {
+            "name" : "약속과 책임",
+            "list" : [
+                {
+                    "name" : "ESG",
+                    "link" : ""
+                },
+                {
+                    "name" : "소셜임팩트",
+                    "link" : ""
+                },
+                {
+                    "name" : "디지털 권리",
+                    "link" : ""
+                },
+                {
+                    "name" : "AI 윤리",
+                    "link" : ""
+                }
+            ],
+            "image" : "https://www.kakaocorp.com/page/ico_responsible.png",
+            "description" : "약속과 책임 아이콘"
+        }
+    ],
+    "footer" : [
+        {
+            "name" : "투자정보",
+            "link" : ""
+        },
+        {
+            "name" : "인재영입",
+            "link" : ""
+        },
+        {
+            "name" : "고객센터",
+            "list" : [
+                {
+                    "name" : "카카오 고객센터",
+                    "link" : ""
+                },
+                {
+                    "name" : "Daum 고객센터",
+                    "link" : ""
+                }
+            ]
+        }
+    ]
+}

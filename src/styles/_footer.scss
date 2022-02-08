@@ -47,15 +47,20 @@ footer{
                             position: relative;
                             &:before{
                                 position: absolute;
-                                top: 5px;
+                                top: 6px;
                                 left: -16px;
                                 width: 6px;
-                                height: 7px;
+                                height: 6px;
                                 border-radius: 50%;
                                 background: #ffcd00;
                                 vertical-align: top;
                                 content: "";
+
+                                @include tablet-min{
+                                    top: 20px;
+                                }
                             }
+
                         }
                     }
 
@@ -86,6 +91,27 @@ footer{
                             -webkit-transform: rotate(-90deg);
                             transform: rotate(-90deg);
                         }
+                    }
+                }
+
+                &:nth-last-child(2){
+                    .tit-service{
+                        margin-top: 36px;
+
+                        @include tablet-min{
+                            margin-top: 0;
+                        }
+                    }
+                }
+
+                &.service-on{
+                    .list-service{
+                        display: block;
+                    }
+
+                    .ico-arrow{
+                        -webkit-transform: rotate(-180deg);
+                        transform: rotate(-180deg);
                     }
                 }
             }

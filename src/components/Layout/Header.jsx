@@ -8,6 +8,8 @@ import SearchLayer from './SearchLayer';
 
 export default function Header({isDark, setDarkProps, icon}) {
     const [showSearchModal, setShowSearchModal] = useState(false);
+    const [showMobileNav, setShowMobileNav] = useState(false);
+
     const pc = useMediaQuery({
         query : "(min-width:1024px)"
     });
@@ -28,8 +30,12 @@ export default function Header({isDark, setDarkProps, icon}) {
         }, 0);
     }
 
+    const handleMobileNav = () => {
+        setShowMobileNav(true);
+    }
+
     return (
-        <BodyClassName className={`${isDark ? 'dark' : 'light'} ${showSearchModal ? 'open-search' : ''}`}>
+        <BodyClassName className={isDark ? 'dark' : 'light'}>
             <header className={`header ${isTablet ? 'type2' : ''}`}>
                 <div className="wrap-header clear">
                     <h1 className="doc-title float-left">
@@ -83,21 +89,21 @@ export default function Header({isDark, setDarkProps, icon}) {
                     {
                         isTablet && 
                         <> 
-                            <button type="button" className='btn-hamburger'>
+                            <button type="button" className='btn-hamburger' onClick={handleMobileNav}>
                                 <span className="screen-out">메인 메뉴 열기</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" className="ico-hamburger"><g fill="none" fillRule="evenodd"><path strokeLinejoin="round" strokeWidth="1.6" d="M19.96 8.88V6.578c0-3.842-4.4-6.272-9.827-6.272S.306 2.736.306 6.578V8.88H19.96z" transform="translate(-360 -16) translate(364 19)" className="stroke"></path> <path strokeLinecap="square" strokeLinejoin="round" strokeWidth="1.6" d="M.306 12.414c1.228 0 1.228 1.18 2.456 1.18s1.228-1.18 2.456-1.18 1.228 1.18 2.455 1.18c1.229 0 1.229-1.18 2.457-1.18 1.228 0 1.228 1.18 2.455 1.18 1.229 0 1.229-1.18 2.457-1.18 1.23 0 1.23 1.18 2.46 1.18 1.229 0 1.229-1.18 2.458-1.18" transform="translate(-360 -16) translate(364 19)" className="stroke"></path> <g strokeLinejoin="round" strokeWidth="1.6" className="stroke"><path d="M10.133.25H.306v1.966c0 1.087.881 1.968 1.967 1.968h15.72c1.086 0 1.967-.881 1.967-1.968V.25h-9.827" transform="translate(-360 -16) translate(364 19) translate(0 17.192)"></path></g> <path d="M5.6 5.8c0 .442-.358.8-.8.8-.442 0-.8-.358-.8-.8 0-.442.358-.8.8-.8.442 0 .8.358.8.8M11.6 5.8c0 .442-.358.8-.8.8-.442 0-.8-.358-.8-.8 0-.442.358-.8.8-.8.442 0 .8.358.8.8M8.6 3.8c0 .442-.358.8-.8.8-.442 0-.8-.358-.8-.8 0-.442.358-.8.8-.8.442 0 .8.358.8.8M13.6 3.8c0 .442-.358.8-.8.8-.442 0-.8-.358-.8-.8 0-.442.358-.8.8-.8.442 0 .8.358.8.8M16.6 5.8c0 .442-.358.8-.8.8-.442 0-.8-.358-.8-.8 0-.442.358-.8.8-.8.442 0 .8.358.8.8" transform="translate(-360 -16) translate(364 19)" className="fill"></path></g></svg>
                             </button>
-                            <button type='button' className='btn-search'>
+                            <button type='button' className='btn-search' onClick={handleSearch}>
                                 <span className="screen-out">검색창 열기</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" className="ico-search"><g fill="none" fillRule="evenodd"><g strokeWidth="1.6"><g transform="translate(-308 -16) translate(312 20)"><circle cx="8.944" cy="8.944" r="8.944"></circle> <path d="M14.987 14.987L21.017 21.017"></path></g></g></g></svg>
                             </button>
                         </>
                     }
                     {
-                        isTablet && <HeaderMobileNav icon={icon}/>
+                        (isTablet && showMobileNav) && <HeaderMobileNav isDark={isDark} setDarkProps={setDarkProps} setShowMobileNav={setShowMobileNav} showMobileNav={showMobileNav} />
                     }
                 </div>
-                { showSearchModal ? <SearchLayer setShowSearchModal={setShowSearchModal}/> : null}
+                { showSearchModal ? <SearchLayer setShowSearchModal={setShowSearchModal} showSearchModal={showSearchModal} /> : null}
             </header>
         </BodyClassName>
     )
