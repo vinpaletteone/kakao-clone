@@ -45,6 +45,14 @@ export default function Header({isDark, setDarkProps, icon}) {
         e.target.closest('li').classList.toggle('on');
     }
 
+    //다른 영역 클릭시 닫히기
+    document.addEventListener('click', (e)=>{
+        if(e.target.className==='list-gnb-li-a') return false;
+        if(document.querySelector('.list-gnb-li.on')!==null){
+            document.querySelector('.list-gnb-li.on').classList.remove('on');
+        }
+    })
+
     return (
         <BodyClassName className={isDark ? 'dark' : 'light'}>
             <header className={`header ${isTablet ? 'type2' : ''}`}>
@@ -65,7 +73,7 @@ export default function Header({isDark, setDarkProps, icon}) {
                                         list && list.map((i, index)=> {
                                             return (
                                                 <li key={index} onClick={handleClick} className='list-gnb-li'>
-                                                    <a href={i.list ? '#javascript' : i.link}>{i.name}</a>
+                                                    <a href={i.list ? '#javascript' : i.link} className='list-gnb-li-a'>{i.name}</a>
 
                                                     {
                                                         i.list && 
