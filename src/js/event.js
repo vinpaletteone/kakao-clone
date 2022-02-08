@@ -27,6 +27,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 //scroll up
                 header.classList.remove('hide');
                 headerFeature.classList.remove('active');
+                if(document.querySelector('.list-gnb-li.on')!==null){
+                    document.querySelector('.list-gnb-li.on').classList.remove('on');
+                }
             }
             beforePosition = afterPosition;
 
