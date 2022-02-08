@@ -1,10 +1,8 @@
 # Kakaocrop web clone 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+카카오크롭 웹사이트 클론 프로젝트
 
-## Available Scripts
-
-In the project directory, you can run:
+## 구현
 
 ### `npm start`
 
