@@ -182,13 +182,20 @@ header{
                 display: flex;
                 position: relative;
                 min-height: 100%;
-                max-width: 412px;
+                max-width: 364px;
                 padding-bottom: 36px;
                 box-sizing: border-box;
                 -webkit-box-orient: vertical;
                 -webkit-box-direction: normal;
                 -ms-flex-direction: column;
                 flex-direction: column;
+
+                @include mobile-min{
+                    padding-bottom: 28px;
+                }
+                @include mobile-max{
+                    padding: 0 24px;
+                }
             }
 
             .gnb-logo{
@@ -210,6 +217,10 @@ header{
                 position: absolute;
                 top: 16px;
                 right: 0;
+
+                @include mobile-min{
+                    right: 24px;
+                }
             }
         }
 
@@ -238,6 +249,11 @@ header{
                             height: 48px;
                             margin-top: 2px;
                             vertical-align: top;
+
+                            @include mobile-min(){
+                                width: 45px;
+                                height: 45px;
+                            }
                         }
 
                         span{
@@ -250,6 +266,13 @@ header{
                             @include theme(){
                                 color: theme-get('footer-span-color');
                             }
+
+                            @include mobile-min(){
+                                margin-left: 9px;
+                                line-height: 47px;
+                                font-size: 30px;
+                                letter-spacing: -.5px;
+                            }
                         }
 
                         &.link::after{
@@ -260,6 +283,9 @@ header{
                             content: "";
                             @include theme(){
                                 border-top: 5px solid theme-get('footer-span-color');
+                            }
+                            @include mobile-min(){
+                                margin-top: 17px;
                             }
                         }
                     }
@@ -300,6 +326,13 @@ header{
                             color: theme-get('footer-stroke');
                             background-color: theme-get('item-title-bg');
                         }
+                        @include mobile-min(){
+                            padding: 12px 18px 14px;
+                            border-radius: 25px;
+                            line-height: 24px;
+                            font-size: 16px;
+                            letter-spacing: -.2px;
+                        }
                     }
 
                     &+li{
@@ -307,6 +340,15 @@ header{
                     }
 
                 }
+
+                @include mobile-min(){
+                    margin: 18px 0 32px 58px;
+                }
+            }
+
+            @include mobile-min(){
+                min-height: calc(100% - 116px);
+                padding-top: 30px;
             }
         }
 
@@ -375,6 +417,10 @@ header{
 
                 button+button{
                     margin-left: 20px;
+
+                    @include mobile-min(){
+                        margin-left: 14px;
+                    }
                 }
             }
         }
