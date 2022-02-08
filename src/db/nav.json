@@ -4,57 +4,57 @@
         "list" : [
             {
                 "name" : "카카오 문화",
-                "link" : ""
+                "link" : "https://www.kakaocorp.com/page/kakao/kakaoCulture"
             },
             {
                 "name" : "공동체",
-                "link" : ""
+                "link" : "https://www.kakaocorp.com/page/kakao/subsidiaryCompany"
             },
             {
                 "name" : "히스토리",
-                "link" : ""
+                "link" : "https://www.kakaocorp.com/page/kakao/history"
             }
         ],
-        "link" : ""
+        "link" : "https://www.kakaocorp.com/page/kakao/kakaoCulture"
     },
     { 
         "name" : "뉴스",
-        "link" : ""
+        "link" : "https://www.kakaocorp.com/page/news"
     },
     {
         "name" : "기술과 서비스",
         "list" : [
             {
                 "name" : "기술",
-                "link" : ""
+                "link" : "https://www.kakaocorp.com/page/service/tech"
             },
             {
                 "name" : "서비스",
-                "link" : ""
+                "link" : "https://www.kakaocorp.com/page/service/service"
             }
         ],
-        "link" : ""
+        "link" : "https://www.kakaocorp.com/page/service/tech"
     },
     {
         "name" : "약속과 책임",
         "list" : [
             {
                 "name" : "ESG",
-                "link" : ""
+                "link" : "https://www.kakaocorp.com/page/responsible/esg"
             },
             {
                 "name" : "소셜임팩트",
-                "link" : ""
+                "link" : "https://www.kakaocorp.com/page/responsible/social"
             },
             {
                 "name" : "디지털 권리",
-                "link" : ""
+                "link" : "https://www.kakaocorp.com/page/responsible/digital"
             },
             {
                 "name" : "AI 윤리",
-                "link" : ""
+                "link" : "https://www.kakaocorp.com/page/responsible/aiEthics"
             }
         ],
-        "link" : ""
+        "link" : "https://www.kakaocorp.com/page/responsible/social"
     }
 ]
