@@ -5,15 +5,15 @@
             "list" : [
                 {
                     "name" : "카카오 문화",
-                    "link" : "kakao"
+                    "link" : "https://www.kakaocorp.com/page/kakao/kakaoCulture"
                 },
                 {
                     "name" : "공동체",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/kakao/subsidiaryCompany"
                 },
                 {
                     "name" : "히스토리",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/kakao/history"
                 }
             ],
             "image" : "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65779d87017800001.png",
@@ -21,7 +21,7 @@
         },
         { 
             "name" : "뉴스",
-            "link" : "",
+            "link" : "https://www.kakaocorp.com/page/news",
             "image" : "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/657726a1017800001.png",
             "description" : "뉴스 아이콘"
         },
@@ -30,11 +30,11 @@
             "list" : [
                 {
                     "name" : "기술",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/service/tech"
                 },
                 {
                     "name" : "서비스",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/service/service"
                 }
             ],
             "image" : "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6575c56d017800001.png",
@@ -46,19 +46,19 @@
             "list" : [
                 {
                     "name" : "ESG",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/responsible/esg"
                 },
                 {
                     "name" : "소셜임팩트",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/responsible/social"
                 },
                 {
                     "name" : "디지털 권리",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/responsible/digital"
                 },
                 {
                     "name" : "AI 윤리",
-                    "link" : ""
+                    "link" : "https://www.kakaocorp.com/page/responsible/aiEthics"
                 }
             ],
             "image" : "https://www.kakaocorp.com/page/ico_responsible.png",
@@ -68,22 +68,26 @@
     "footer" : [
         {
             "name" : "투자정보",
-            "link" : ""
+            "link" : "https://www.kakaocorp.com/ir/main"
         },
         {
             "name" : "인재영입",
-            "link" : ""
+            "link" : "https://careers.kakao.com/index"
         },
         {
             "name" : "고객센터",
             "list" : [
                 {
                     "name" : "카카오 고객센터",
-                    "link" : ""
+                    "link" : "https://cs.kakao.com/"
                 },
                 {
                     "name" : "Daum 고객센터",
-                    "link" : ""
+                    "link" : "https://cs.daum.net/"
+                },
+                {
+                    "name" : "멜론 고객센터",
+                    "link" : "https://faqs2.melon.com/customer/index.htm"
                 }
             ]
         }
