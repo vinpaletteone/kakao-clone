@@ -478,4 +478,75 @@ header{
             }
         }
     }
+
+    .list-gnb{
+        & > li{
+            display: inline-block;
+            position: relative;
+
+            .list-sub{
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 4px;
+                padding: 0 24.5px;
+                border-radius: 24px;
+                white-space: nowrap;
+                box-sizing: border-box;
+                z-index: 100;
+                @include theme(){
+                    background-color: theme-get('text-color');
+                }
+
+                li{
+                    display: inline-block;
+
+                    a{
+                        display: block;
+                        padding: 11px 0 13px;
+                        line-height: 24px;
+                        font-weight: normal;
+                        @include theme(){
+                            color: theme-get('bg-color');
+                        }
+                        
+                        &:hover{
+                            font-weight: 700;
+                            @include theme(){
+                                color: theme-get('bg-color');
+                            }
+                        }
+                    }
+
+                    &+li{
+                        margin-left: 24px;
+                    }
+                }
+
+                &:first-child{
+                    .list-sub{
+                        width: 267px;
+                    }
+                }
+
+                &:nth-child(3){
+                    .list-sub{
+                        width: 142px;
+                    }
+                }
+
+                &:nth-child(3){
+                    .list-sub{
+                        width: 344px;
+                    }
+                }
+            }
+
+            &.on{
+                .list-sub{
+                    display: block;
+                }
+            }
+        }
+    }
 }

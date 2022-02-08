@@ -5,10 +5,12 @@ import Logo from './Logo';
 import { useMediaQuery } from 'react-responsive';
 import HeaderMobileNav from './HeaderMobileNav';
 import SearchLayer from './SearchLayer';
+import list from '../../db/nav.json'
 
 export default function Header({isDark, setDarkProps, icon}) {
     const [showSearchModal, setShowSearchModal] = useState(false);
     const [showMobileNav, setShowMobileNav] = useState(false);
+    const [showHeaderNav, setShowHeaderNav] = useState(false);
 
     const pc = useMediaQuery({
         query : "(min-width:1024px)"
@@ -34,6 +36,15 @@ export default function Header({isDark, setDarkProps, icon}) {
         setShowMobileNav(true);
     }
 
+    const handleClick = (e) => {
+        showHeaderNav ? setShowHeaderNav(false) : setShowHeaderNav(true);
+        document.querySelectorAll('.list-gnb-li').forEach((item)=>{
+            if(e.target.closest('li')===item) return;
+            item.classList.remove('on');
+        })
+        e.target.closest('li').classList.toggle('on');
+    }
+
     return (
         <BodyClassName className={isDark ? 'dark' : 'light'}>
             <header className={`header ${isTablet ? 'type2' : ''}`}>
@@ -50,18 +61,29 @@ export default function Header({isDark, setDarkProps, icon}) {
                             <nav id="gnbContent" className="doc-gnb">
                                 <h2 className="screen-out">메인메뉴</h2>
                                 <ul className="list-gnb">
-                                    <li>
-                                        <a href="/">카카오</a>
-                                    </li>
-                                    <li>
-                                        <a href="/">뉴스</a>
-                                    </li>
-                                    <li>
-                                        <a href="/">기술과 서비스</a>
-                                    </li>
-                                    <li>
-                                        <a href="/">약속과 책임</a>
-                                    </li>
+                                    {
+                                        list && list.map((i, index)=> {
+                                            return (
+                                                <li key={index} onClick={handleClick} className='list-gnb-li'>
+                                                    <a href={i.list ? '#javascript' : i.link}>{i.name}</a>
+
+                                                    {
+                                                        i.list && 
+                                                        <ul className='list-sub'>
+                                                            {i.list && i.list.map((item, idx)=>{
+                                                                return(
+                                                                    <li key={idx}>
+                                                                        <a href={item.link}>{item.name}</a>
+
+                                                                    </li>
+                                                                )
+                                                            })}
+                                                        </ul>
+                                                    }
+                                                </li>
+                                            )
+                                        })
+                                    }
                                 </ul>
                             </nav>
                             <div className="area-util float-right">

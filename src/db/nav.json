@@ -14,8 +14,7 @@
                 "name" : "히스토리",
                 "link" : "https://www.kakaocorp.com/page/kakao/history"
             }
-        ],
-        "link" : "https://www.kakaocorp.com/page/kakao/kakaoCulture"
+        ]
     },
     { 
         "name" : "뉴스",
@@ -32,8 +31,7 @@
                 "name" : "서비스",
                 "link" : "https://www.kakaocorp.com/page/service/service"
             }
-        ],
-        "link" : "https://www.kakaocorp.com/page/service/tech"
+        ]
     },
     {
         "name" : "약속과 책임",
@@ -54,7 +52,6 @@
                 "name" : "AI 윤리",
                 "link" : "https://www.kakaocorp.com/page/responsible/aiEthics"
             }
-        ],
-        "link" : "https://www.kakaocorp.com/page/responsible/social"
+        ]
     }
 ]
