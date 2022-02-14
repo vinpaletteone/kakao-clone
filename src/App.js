@@ -4,6 +4,7 @@ import 'sass-reset';
 import './styles/_global.scss'
 import { useState } from "react";
 
+//파일
 function App() {
   return (
     <>
